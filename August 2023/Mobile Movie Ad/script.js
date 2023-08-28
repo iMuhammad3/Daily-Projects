@@ -1,0 +1,1 @@
+document.querySelector('button').addEventListener('click', () => alert('Tickets are sold out 🫤'))

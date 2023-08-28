@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: inherit;
+    /* border: 1px solid red; */
+}
+:root{
+    --text-secondary: #9ba5a5;
+    --text-primary: #5a6c76;
+    --bg-white: #fafafa;
+    --white: #ffffff;
+    --purple: rgb(146, 128, 237);
+    --black: #112;
+}
+/* general */
+body{
+    font-family: "Poppins", sans-serif;
+}
+body.dark{
+    --text-secondary: #e0eeee;
+    --text-primary: #cbe3f0;
+    --bg-white: #303133;
+    --white: #111111;
+    --black: rgb(237, 242, 248);
+}
+li{
+    list-style: none;
+}
+img{
+    width: 300px;
+    object-fit: cover;
+}
+
+/*  */
+.fa-moon{
+    position: absolute;
+    right: 0;
+    transform: translate(-200%, 100%);
+    cursor: pointer;
+    color: var(--black);
+}
+.container{
+    background: var(--bg-white);
+    min-width: 100vw;
+    min-height: 100vh;
+    transition: background .4s, color .4s;
+}
+
+header{
+    background: var(--white);
+    color: var(--text-secondary);
+    padding: 3rem 3rem 0;
+    box-shadow: 0 1px 4px #0002;
+}
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul {
+    display: flex;
+}
+ul li{
+    padding: .3rem .6rem;
+    cursor: pointer;
+}
+ul li:hover{
+    color: var(--purple);
+    border-bottom: 2px solid var(--purple);
+}
+.active-li{
+    color: var(--purple);
+    border-bottom: 2px solid var(--purple);
+}
+input{
+    border: none;
+    font-size: 1rem;
+    padding: .1rem .6rem;
+    width: 8rem;
+    background: var(--white);
+    color: var(--text-primary);
+}
+input::placeholder{
+    color: var(--text-secondary);
+}
+
+/* main */
+main{
+    color: var(--text-primary);
+    padding: 1rem 3.5rem;
+}
+h3 {
+    font-weight: 400;
+    font-size: 17px;
+}
+.games{
+    display: flex;
+    overflow: scroll;
+    gap: 1px;
+}
+.games .game{
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    border: .1px solid color-mix(in oklab, var(--white), lightblue);
+    box-shadow: 0 2px 4px #0001;
+    cursor: pointer;
+    border-radius: 2px;
+    overflow: hidden;
+    transition: transform .3s, box-shadow .2s;
+}
+.game::-webkit-scrollbar{
+    display: none;
+}
+.game:hover{
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px #3333;
+}
+.game > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .6rem 1rem;
+}
+.game-name{
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.fa-star{
+    font-size: 14px;
+    color: var(--purple);
+}
+/* new games */
+.new-games .game{
+    width: 300px;
+}
+.new-games img{
+    width: 100%;
+    height: 140px;
+}
+/* recommended */
+.recommended-games .game{
+    width: 170px;
+}
+.recommended-games img {
+    width: 100%;
+    height: 140px;
+}
+.recommended-games .game > div{
+    flex-direction: column;
+}
+.recommended-games .game-name{
+    width: 100%;
+    text-align: center;
+}
+/* trending games */
+.trending-games .game{
+    width: 250px;
+}
+.trending-games img {
+    width: 100%;
+    height: 120px;
+}
+/* searched games */
+
+.search-results > .games{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible;
+}
+
+#loader{
+    display: none;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border: 3px dotted var(--purple);
+    border-radius: 50%;
+    animation: spin 2s forwards linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 580px){
+    header{
+        padding: .5rem 1rem ;
+    }
+    main{
+        padding: .5rem 1rem;
+    }
+    ul{
+        display: none;
+    }
+    .fa-moon{
+        transform: translate(-100%, 70%);
+    }
+}
