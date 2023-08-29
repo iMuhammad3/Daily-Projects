@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+*{
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    margin: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom left, #1e7881, #141a30);
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+.container{
+    position: relative;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 10px;
+    width: 85%;
+    max-width: 500px;
+    color: #fbfdfb;
+    background-color: rgba(157, 157, 157, 0.1);
+    box-shadow: 0 3px 20px #0003;
+}
+img{
+    width: 200px;
+    position: absolute;
+    bottom: -35%;
+    right: -10%;
+}
+.giveaway{
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -25px);
+    position: absolute;
+    background: #0f0f2b;
+    color: #f0586c;
+    padding: .6rem 3rem;
+    font-size: 20px;
+    font-weight: 400;
+    box-shadow: 0 3px 10px #0004;
+}
+h2{
+    font-weight: 400;
+    line-height: 1;
+    width: fit-content;
+}
+p{
+    width: 80%;
+}
+
+.count-down{
+    background-color: rgba(11, 11, 11, 0.2);
+    display: flex;
+    justify-content: space-between;
+    padding: .7rem;
+}
+.count-down > div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+.count-down b{
+    padding: .4rem .5rem;
+    background-color: #0f0f2b;
+}
+.count-down small{
+    font-size: 11px;
+    color: #adbec7;
+}
+
+.container > button{
+    background-color: #fe536b;
+    padding: .5rem 1.3rem;
+    box-shadow: 0 3px 20px #0007;
+    border: none;
+    color: #fbfdfb;
+    font-size: 23px;
+    position: absolute;
+    bottom: -7%;
+    cursor: pointer;
+}
+button:hover{
+    opacity: .95;
+    scale: .99;
+}
+
+@media (max-width: 535px){
+    .container{
+        margin: 30px;
+        align-items: center;
+    }
+    img{
+        position: static;
+    }
+    .container > button{
+        bottom: -20px;
+    }
+    h2, p{
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .count-down{
+        padding: .7rem .3rem;
+    }
+}

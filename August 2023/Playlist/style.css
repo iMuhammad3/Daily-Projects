@@ -130,7 +130,7 @@ li small {
     cursor: pointer;
     margin: auto;
     -webkit-font-smoothing: antialiased;
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(to top right, rgb(48, 48, 218), rgb(141, 56, 225));
 }
