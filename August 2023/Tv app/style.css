@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
+
+*{
+    /* border: 1px solid red; */
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --bg-main: #073f40;
+    --bg-sec: linear-gradient(#04151c,#073d3d);
+    --text-clr: #828a8f; 
+    --hover-clr: #30bfb2;
+    --hover-bg: #30bfb339;
+}
+
+html{
+    font-size: 19px;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-main);
+    min-height: 100vh;
+}
+
+li{
+    list-style: none;
+}
+i:hover, button:hover{
+    cursor: pointer;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 500;
+}
+
+.container{
+    color: var(--text-clr);
+    width: 93%;
+    background: var(--bg-sec);
+    display: flex;
+}
+
+aside{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+aside > div{
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    margin: 4px 0;
+    padding: .3rem 1rem;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    transition: all .2s;
+}
+aside small{
+    font-size: 14px;
+}
+aside > div:hover{
+    background-color: var(--hover-bg);
+}
+aside > div:hover h3{
+    color: var(--hover-clr);
+}
+aside > div:hover small{
+    color: #eee;
+}
+.active-channel{
+    background-color: var(--hover-bg);
+}
+.active-channel h3{
+    color: var(--hover-clr);
+}
+.active-channel small{
+    color: #eee;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1rem;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.fa-bars{
+    position: absolute;
+    top: .1rem;
+    right: .4rem;
+    font-size: 27px;
+}
+.fa-bars:hover{
+    color: white;
+}
+ul{
+    display: flex;
+}
+ul li{
+    padding: 0 .4rem;
+    border-radius: 30px;
+    transition: color .2s, background-color .2s;
+}
+ul li:hover{
+    cursor: pointer;
+    background-color: var(--hover-bg);
+    color: var(--hover-clr);
+}
+
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie{
+    width: 230px;
+    margin: .2rem;
+    border: 1px solid #073f40;
+    cursor: pointer;
+    transition: box-shadow .3s;
+}
+.movie:hover{
+    box-shadow: 0 3px 22px 7px #1127;
+}
+.movie img{
+    width: 100%;
+}
+.movie h4{
+    padding: .2rem;
+    color: #eaeaea;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 670px){
+    html{
+        font-size: 17px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .fa-bars{
+        display: none;
+    }
+    aside{
+        flex-direction: row;
+        overflow-x: scroll;
+        gap: 5px;
+    }
+    aside > div{
+        border-radius: 2px;
+    }
+    aside small{
+        font-size: 11px;
+    }
+    .movie{
+        width: 45%;
+    }
+}
+@media screen and (max-width: 540px){
+    .movie{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 400px){
+    ul{
+        font-size: 12px;
+        margin-top: -15px;
+    }
+}
