@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root{
+    --purple: #3e2e5b;
+    --white: #fdf7ff;
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--purple);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+li{
+    list-style-type: none;
+}
+
+.fa-bell{
+    position: absolute;
+    top: 2%;
+    right: 14%;
+    padding: .7rem;
+    border: 1px solid crimson;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.container{
+    position: relative;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px #1118;
+    transition: scale .4s;
+}
+
+header{
+    padding: 1rem;
+}
+
+main{
+    background: #3a2a57;
+}
+
+main ul{
+    display: flex;
+    flex-direction: column;
+
+}
+main ul li{
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+main ul li:hover{
+    background-color: color-mix(in oklab, #3a2a57 95%, white);
+    cursor: pointer;
+}
+.hide{
+    scale: 0;
+}
+
+footer{
+    padding: 1rem;
+    text-align: center;
+    cursor: pointer;
+    color: crimson;
+}
+footer:hover{
+    background-color: color-mix(in oklab, var(--purple) 95%, white);
+}
