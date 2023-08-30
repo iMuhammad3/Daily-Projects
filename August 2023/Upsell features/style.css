@@ -1,0 +1,214 @@
+
+:root{
+    --bg-main: #30304c;
+    --text-clr: #abaac9;
+    --bg-container: #191931;
+    --gradient: linear-gradient(to right, #ff8c77, #ff5a7f);
+    --gradient2: linear-gradient(to top, #b457c9,#f0798f);
+    --grey: #3d3c5a;
+    --border-clr: #0e0f24;
+    --black: #112;
+}
+
+[class*="gradient"]{
+    position: absolute;
+    z-index: -1;
+    filter: blur(10px);
+}
+
+.fa-solid{
+    color: var(--black);
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 23px;
+    padding: .4rem .55rem;
+    border-radius: 40px;
+    background: var(--grey);
+}
+
+body{
+    background-color: var(--bg-main);
+}
+body.light{
+    --bg-main: #d3d3d3;
+    --text-clr: #0d0c2c;
+    --bg-container: #cfcfd6;
+    --gradient: linear-gradient(to right, #ff8c77, #ff5a7f);
+    --gradient2: linear-gradient(to top, #b457c9,#f0798f);
+    --grey: #57565c;
+    --border-clr: #e5e6f5;
+    --black: rgb(231, 231, 231);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    color: var(--text-clr);
+    background-color: var(--bg-container);
+    border-radius: 2px;
+    box-shadow: 0 3px 9px #1113;
+}
+
+header{
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 1px solid var(--border-clr);
+}
+
+main{
+    display: flex;
+}
+
+.email, .analytics{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem .8rem;
+    width: 26%;
+    border-right: 1px solid var(--border-clr);
+}
+ul{
+    list-style: disc;
+    font-size: 14px;
+}
+.analytics p{
+    font-size: 14px;
+    text-align: center;
+    width: 170px;
+}
+
+.others{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+.others p{
+    padding-left: .5rem;
+    font-size: 14px;
+    flex-grow: 1;
+}
+.others > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 7px;
+    padding: 1rem .5rem;
+    border-top: 1px solid var(--border-clr);
+}
+sub{
+    color: var(--grey);
+}
+
+button{
+    font-size: 13px;
+    padding: .07rem .35rem;
+    border-radius: 30px;
+    border: 1px solid #543f58;
+    transition: box-shadow .3s;
+}
+button:hover{
+    box-shadow: 0 2px 10px #ff5a7f44;
+}
+
+.saving-pack{
+    position: relative;
+    overflow: hidden;
+}
+
+.banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 7px;
+    background: var(--gradient);
+    color: white;
+    padding: .04rem 1.3rem;
+    transform: rotate(-45deg) translate(-23px, -12px);
+}
+
+
+.gradient1{
+    top: 70%;
+    left: 5%;
+    width: 80px;
+    height: 100px;
+    border-radius: 120px 50px 179px 43px;
+    background: var(--gradient2);
+    animation: glow 30s linear;
+}
+.gradient2{
+    top: 10%;
+    left: 7%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px 120px 19px 43px;
+    background: var(--gradient);
+    animation: glow2 30s;
+}
+.gradient3{
+    top: 88%;
+    width: 70px;
+    height: 90px;
+    border-radius: 100px 20px 59px 53px;
+    background: var(--gradient);
+    animation: glow 30s linear;
+}
+.gradient4{
+    top: 30%;
+    right: 3%;
+    width: 30px;
+    height: 30px;
+    border-radius: 120px 50px 179px 43px;
+    background: var(--gradient2);
+    animation: glow2 30s;
+}
+
+@keyframes glow {
+    10%{
+        scale: 0.8;
+    }
+    30%{
+        scale: 1.2;
+    }
+    60%{
+        scale: 0.9;
+    }
+    90%{
+        scale: 1.1;
+    }
+}
+@keyframes glow2 {
+    10%{
+        scale: 0.8;
+    }
+    30%{
+        scale: 1.2;
+    }
+    60%{
+        scale: 0.9;
+    }
+    90%{
+        scale: 1.1;
+    }
+}
+
+@media screen and (max-width: 766px){
+    body{
+        padding: 1.5rem;
+    }
+    main{
+        flex-wrap: wrap;
+    }
+    .email, .analytics{
+        width: 50%;
+    }
+    .others{
+        width: 100%;
+    }
+    .others > div{
+        padding: 1rem 1.4rem;
+    }
+}
