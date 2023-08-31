@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/4e6601cb6b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="progress">
+        <div>
+            <i class="fa-solid fa-user done"></i>
+            Create account
+        </div>
+        <hr>
+        <div>
+            <i class="fa-solid fa-camera done"></i>
+            Set your Interests
+        </div>
+        <hr>
+        <div>
+            <i class="fa-solid fa-user-pen"></i>
+            Customize you Profile
+        </div>
+    </div>
+    
+    <div class="wrapper"> 
+
+        <div class="account-container hide">
+            <h2>Create an account</h2>
+            <div class="sign-up">
+                <div>
+                    <label>Email :</label>
+                    <input type="email" placeholder="Enter email">
+                </div>
+                <div>
+                    <label>Username :</label>
+                    <input type="text" placeholder="Enter username">
+                </div>
+                <div>
+                    <label>Password :</label>
+                    <div>
+
+                    <input id="myInput" type="password" placeholder="Enter password">
+                    <i class="fa-solid fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+            <button class="nextBtn1">Next
+                <i class="fa-solid fa-arrow-right-long"></i>
+            </button>
+
+        </div>
+            <div class="interest-container">
+                <h2>Choose your interests</h2>
+                <div class="interests"></div>
+                <div style="display:flex;gap:10px">
+                    <button class="prev1">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                        Prev
+                    </button>
+                    <button class="nextBtn2">Next
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="profile-container hide">
+                <h2>Customize your profile</h2>
+                <p>Yh I copied Peter and I also don't know what to put here</p>
+                <div class="myWeirdDiv" style="flex-grow:1;width:70%;border:5px dashed;"></div>
+                <button class="prev2">
+                    <i class="fa-solid fa-arrow-left-long"></i>
+                    Prev
+                </button>
+            </div>
+
+    </div>
+
+</body>
+
+</html>
