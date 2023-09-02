@@ -1,0 +1,100 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+<script src="https://kit.fontawesome.com/4e6601cb6b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    
+    <div class="container">
+        <header>
+            <li>Task Name</li>
+            <li id="closeBtn">&times;</li>
+        </header>
+
+        <main>
+            <section>
+                <div class="task-details">
+                    <div>
+                        <p>Start Date</p>
+                        <div class="flex">
+                            <div class="shadow">10 June 2017&nbsp;
+                                <i class="fa-regular fa-calendar"></i>
+                            </div>
+                            <div class="shadow">15:00&nbsp;
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>End Date</p>
+                        <div class="flex">
+                            <div class="shadow">18 June 2017&nbsp;
+                                <i class="fa-regular fa-calendar"></i>
+                            </div>
+                            <div class="shadow">17:00&nbsp;
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Type</p>
+                        <div class="flex">
+                            <div class="shadow">Task&nbsp;
+                                <i class="fa-solid fa-chevron-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex align">
+                    <progress value="59" max="100"></progress>
+                    <div class="shadow">59</div>%
+                </div>
+            </section>
+
+            <section class="flex n">
+                <div class="half">
+                    <div>
+                        <p>Task Name</p>
+                        <input type="text" value="10 June 2017">
+                    </div>
+                    <div>
+                        <p>Task Description</p>
+                        <textarea cols="30" rows="10" placeholder="Add task description"></textarea>
+                    </div>
+                </div>
+
+                <div class="half">
+                    <div>
+                        <p>Working on this</p>
+                        <div class="people flex">
+                            <img src="https://images.unsplash.com/photo-1457449940276-e8deed18bfff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                            <img src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyc29ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" alt="">
+                            <div class="plus">+</div>
+                        </div>
+                    </div>
+                    <div>
+                        <p>Attachments</p>
+                        <div class="flex wrap">
+                            <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bm90ZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                            <img src="https://images.unsplash.com/photo-1503551723145-6c040742065b-v2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG5vdGVzfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" alt="">
+                            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fG5vdGVzfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                            <img src="https://images.unsplash.com/photo-1512758017271-d7b84c2113f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fG5vdGVzfGVufDB8MHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                            <div class="plus">+</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <button>Save</button>
+        </main>
+    </div>
+
+    <div id="open" class="hide2">Open Tasks</div>
+
+</body>
+
+</html>
