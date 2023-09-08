@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+:root{
+    --blue: #3097cc;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    font-family: "Poppins", sans-serif;
+    color: #3b3b3b;
+    background-color: #f6fbfe;
+}
+
+h1,h2,h3,h4{
+    font-weight: 500;
+}
+
+.container{
+    position: relative;
+    width: 370px;
+    background-color: white;
+    box-shadow: 0 2px 60px #87c4e767;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    overflow: hidden;
+}
+
+.img{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+img{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+.img > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.1;
+    color: var(--blue);
+    background: white;
+    margin: 0 auto;
+    font-size: 13px;
+    padding: 1.3rem .6rem;
+    border-radius: 50%;
+    border: 5px solid;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(-10%, 50%);
+    z-index: 1;
+}
+
+.info{
+    margin: -20px 0;
+    padding: 0 1.5rem;
+    z-index: 2;
+}
+.info h3{
+    color: var(--blue);
+    width: 20ch;;
+}
+
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.time h4{
+    color: var(--blue);
+}
+.countdown{
+    display: flex;
+    gap: 8px;
+}
+.countdown > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.countdown b{
+    border: 1px solid var(--blue);
+    width: 5ch;
+    height: 5ch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+button{
+    border: none;
+    background: linear-gradient(70deg, #2d95ca, #50b2e7);
+    color: white;
+    background-color: transparent;
+    font-size: 30px;
+    padding: 1.4rem;
+    cursor: pointer;
+    position: relative;
+
+    /* transform: skew(0, 5deg); */
+}
+button:hover{
+    opacity: .93;
+}
+
+
+/* testing */
+.skewed{
+    background-color: white;
+    width: 100%;
+    height: 55px;
+    position: absolute;
+    transform: skewY(6deg);
+    top: 36%;
+    border-top: 2px solid var(--blue);
+}
+
+@media (max-width: 380px){
+    .skewed{
+        display: none;
+    }
+    img{
+        height: 200px;
+    }
+}
