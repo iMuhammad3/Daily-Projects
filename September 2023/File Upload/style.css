@@ -1,0 +1,102 @@
+/* Add CSS here */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-wheat: #eadccf;
+    --orange: #ff9436;
+    --dark-orange: #c57224;
+    --blue: #6ecef7;
+    --dark-grey: #373735;
+}
+
+body{
+    background-color: var(--bg-wheat);
+    color: var(--dark-grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    background-color: #fefef6;
+    width: 550px;
+    height: 650px;
+    border: 2px solid var(--dark-orange);
+    border-radius: 5px;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: var(--orange);
+    color: #ededed;
+    padding: 1.4rem;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+}
+
+section{
+    width: 100%;
+    height: 40%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    overflow: scroll;
+}
+section > div{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.loading{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+progress{
+    width: 100%;
+}
+
+.container > div{
+    width: 100%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > div > div{
+    border: 3px dotted var(--dark-orange);
+    padding: 4rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+button{
+    font-size: 18px;
+    border: none;
+    padding: .5rem .8rem;
+    border-radius: 4px;
+    background-color: var(--orange);
+    color: #ededed;
+    box-shadow: 0 3px var(--dark-orange) , 0 0 6px #0002;
+    cursor: pointer;
+    transition: .06s;
+}
+button:active{
+    box-shadow: 0 0 2px #0002;
+    transform: translateY(3px);
+}
