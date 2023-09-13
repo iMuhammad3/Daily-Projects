@@ -18,11 +18,12 @@ body{
     min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     padding: 1rem;
+    color: #fffefa;
+
 }
 
 .container{
     width: min(90%, 850px);
-    color: #fffefa;
     display: flex;
     flex-direction: column;
     gap: 6px;
