@@ -1,0 +1,133 @@
+
+:root{
+    --orange: #fe5335;
+    --cyan: #00c9c1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(49, 49, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+}
+
+.container{
+    width: min(90%, 850px);
+    color: #fffefa;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+header{
+    padding: 1.6rem;
+    background-color: var(--orange);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+li{
+    list-style-type: none;
+}
+nav, ul{
+    display: flex;
+    gap: 10px;
+}
+nav{
+    justify-content: right;
+}
+nav li, 
+ul li{
+    padding: .1rem .6rem;
+    border-radius: 20px;
+    &:hover{
+        cursor: pointer;
+        background-color: #fffefa33;
+    }
+}
+
+main{
+    border-bottom: 5px solid var(--orange);
+    padding-bottom: 5px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+th{
+    background-color: var(--cyan);
+}
+th, td{
+    border: 1px solid;
+    padding: 1rem;
+    text-align: center;
+}
+tr{
+    background-color: rgba(220, 220, 220, 0.3);
+}
+tr:nth-child(even){
+    background-color: rgba(220, 220, 220, 0.07);
+}
+td img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+td img,
+td h2{
+    display: inline-block;
+}
+.td-rank{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.td-votes > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#viewBtn{
+    align-self: flex-end;
+    cursor: pointer;
+}
+#viewBtn:hover{
+    color: var(--orange);
+}
+
+@media (max-width: 666px){
+    tr :nth-child(3){
+        display: none;
+    }
+    nav,
+    ul {
+        gap: 0;
+    }
+}
+@media (max-width: 466px) {
+    tr :nth-child(4) {
+        display: none;
+    }
+    header{
+        flex-direction: row;
+    }
+    nav,
+    ul {
+        flex-direction: column;
+    }
+    nav{
+        order: 2;
+    }
+}
