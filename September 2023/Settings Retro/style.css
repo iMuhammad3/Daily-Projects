@@ -1,0 +1,278 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    background-color: #141318;
+    color: #ffffff;
+    min-height: 100dvh;
+}
+
+body .wrapper {
+    background-color: #1d2027;
+}
+
+body aside {
+    background-color: #3d5e6f;
+}
+
+body aside>section {
+    color: #9fa3a8;
+}
+
+body aside>section h4 {
+    color: #ffffff;
+}
+
+body aside li:hover {
+    background-color: #1d2027;
+}
+
+body .slider {
+    background-color: #1d2027;
+}
+
+body .slider::before {
+    background-color: #fdfffe;
+}
+
+body svg {
+    fill: #ffffff;
+}
+
+body li.active {
+    background-color: #1d2027;
+}
+
+body.light {
+    background-color: #dddde1;
+    color: #202020;
+}
+
+body.light .wrapper {
+    background-color: #cfd2d8;
+}
+
+body.light aside {
+    background-color: #86cdf0;
+}
+
+body.light aside>section {
+    color: #747474;
+}
+
+body.light aside>section h4 {
+    color: #202020;
+}
+
+body.light aside li:hover {
+    background-color: #cfd2d8;
+}
+
+body.light .slider {
+    background-color: #cfd2d8;
+}
+
+body.light .slider::before {
+    background-color: #222223;
+}
+
+body.light svg {
+    fill: #202020;
+}
+
+body.light li.active {
+    background-color: #cfd2d8;
+}
+
+.wrapper {
+    padding: 0.4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+aside {
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+aside>section {
+    padding: 2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+}
+
+aside>section h4 {
+    margin-bottom: 15px;
+}
+
+aside>section>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+aside>nav {
+    width: 100%;
+}
+
+aside>nav>li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+}
+
+main {
+    width: 310px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+main>section {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+main>section>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+main>.buttons {
+    margin-top: auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+main>.buttons>button {
+    font-size: 18px;
+    border: 3px solid #549da0;
+    padding: 0.2rem 2rem;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+main>.buttons>button:hover {
+    background-color: #549da0;
+    color: white;
+}
+
+/*
+
+ slider
+
+*/
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 22px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.1333333333);
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0 0 0 0;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+/* Style the slider's circle (knob) */
+.slider::before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    top: 2px;
+    left: 2px;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Move the circle (knob) to the right when checked */
+.switch input:checked+.slider::before {
+    transform: translateX(28px);
+    background-color: #fbaa48;
+}
+
+/*
+
+ RANGE
+
+*/
+input[type=range] {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    width: 55%;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    background: #549da0;
+    height: 2px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    height: 13px;
+    width: 13px;
+    border-radius: 50px;
+    margin-top: -5px;
+}
+
+.cyan-border {
+    border: 1px solid #549da0;
+    margin-top: -1px;
+}
+
+.bolden {
+    font-weight: bold;
+}
