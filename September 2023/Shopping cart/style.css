@@ -1,0 +1,120 @@
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: BlinkMacSystemFont, Roboto, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    background: linear-gradient(to top right, #984ead, #5e3987, #343a90);
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+
+    width: min(97%, 350px);
+    background-color: white;
+    color: white;
+    border-radius: 4px;
+    box-shadow: 0 3px 50px 30px #2221;
+    overflow: hidden;
+}
+
+header{
+    background: linear-gradient(to right, #b550ee, #fc90d3);
+    fill: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.3rem;
+    box-shadow: 0 2px 30px #ee50e38a;
+}
+
+svg{
+    cursor: pointer;
+}
+h3,h4{
+    font-weight: 400;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.products{
+    align-self: flex-start;
+    width: 100%;
+    flex-grow: 1;
+    color: #001;
+}
+.products>p{
+    text-align: right;
+    margin: 1rem 1rem 0;
+}
+.products img{
+    width: 80px;
+}
+.product{
+    padding: .5rem;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #fc90ef;
+}
+.product .info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.product .info > div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.product .info p{
+    display: inline-block;
+    cursor: pointer;
+}
+.product .info small{
+    margin-left: auto;
+}
+
+button{
+    margin-top: auto;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+    background: linear-gradient(to right, #b550ee, #fc90d3);
+    width: 450px;
+    height: 320px;
+    border-radius: 100%;
+    transform: translateY(255px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button p{
+    transform: translateY(-130px);
+    position: relative;
+    cursor: pointer;
+}
+
+button p::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 90px;
+    height: 2px;
+    transform: translate(-120%, 5px);
+    border-radius: 10px;
+    background-color: white;
+}
