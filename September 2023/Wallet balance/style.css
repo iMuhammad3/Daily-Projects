@@ -1,0 +1,92 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #f3f3f5;
+    color: #535353;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+}
+h1,h2,h3,h4,h5{
+    font-weight: 400;
+}
+
+.container{
+    width: min(340px, 93%);
+    background: #fff;
+    box-shadow: 0 2px 20px #41355513;
+    border-radius: 4px;
+    overflow: hidden;
+    font-weight: 200;
+}
+
+header{
+    background: radial-gradient(farthest-corner at 10px 70% ,#97c1e8 10%, #ad91de 90%);
+    color: #fafaff;
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-between;
+    fill: white;
+}
+nav>*{
+    cursor: pointer;
+}
+header>div:nth-child(2){
+    align-self: center;
+}
+header>div:last-child{
+    display: flex;
+    justify-content: space-around;
+    &>p{cursor: pointer;}
+}
+
+main{
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+main > section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+main > section > div:last-child{
+    border: 2px solid #ad91de;
+    border-radius: 20px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    &>span{
+        cursor: pointer;
+        border-right: 2px solid #ad91de;
+        padding: .2rem .5rem;
+        &:last-child {
+            border-right: none;
+        }
+        &:hover{
+            background: #ad91de23;
+        }
+    }
+}
+
+nav>*:hover,
+header>div:last-child>p:hover{
+    opacity: .9;
+}
