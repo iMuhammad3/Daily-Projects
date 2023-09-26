@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    font-weight: 300;
+    background-color: #057287;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+h1,h2,h3,h4,h5, b{
+    font-weight: 400;
+    display: inline-block;
+}
+
+.container{
+    background-color: #129cb6;
+    color: #f5feff;
+    fill: #f5feff;
+    width: 320px;
+    box-shadow: 0 0 70px 10px #1113;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+header{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first-section{
+    background-color: #fcfafb;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 3px 30px #1114;
+}
+.first-section > :first-child{
+    grid-column: span 2;
+    width: fit-content;
+    justify-self: center;
+    padding: 1.8rem 2.2rem;
+    font-size: 30px;
+    line-height: 1;
+    border-radius: 100px;
+    position: relative;
+    z-index: 1;
+    &>h1, &>h4{
+        font-weight: 200;
+    }
+}
+.first-section> :first-child::after{
+    content: '';
+    position: absolute;
+    inset: -5px;
+    border-radius: inherit;
+    border: 4px solid #fe3b77;
+    border-left-color: rgba(162, 19, 19, 0.365);
+    rotate: 45deg;
+    z-index: 2;
+}
+.first-section > *{
+    display: flex;
+    flex-direction: column;
+    color: #6a696a;
+}
+.first-section > div b{
+    font-size: 30px;
+}
+
+.second-section{
+    display: flex;
+    flex-direction: column;
+}
+.second-section > h3{
+    font-weight: 100;
+    padding: .7rem 0 0;
+    text-align: center;
+}
+.second-section>div{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.second-section > div > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer{
+    background-color: #f5feff;
+    fill: #057287;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer svg{
+    height: 1.6em;
+    cursor: pointer;
+}
+
+button{
+    background: linear-gradient(30deg, #fe3b77, #bf336f);
+    padding: .5rem 2rem;
+    font-weight: 600;
+    border-radius: 100px;
+    border: none;
+    color: inherit;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 10px #fe3b77da;
+}
