@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background: #f7f8fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+}
+img{
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.container{
+    margin: 50px 0;
+    width: min(900px, 98%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 70px 80px;
+}
+
+section{
+    background-color: white;
+    box-shadow: 0 2px 30px #1112;
+    border-radius: 7px;
+    overflow: hidden;
+}
+button{
+    font-size: inherit;
+    border: 1.5px solid black;
+    background-color: white;
+    color: black;
+    padding: .1rem 1.8rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color .2s, color .2s;
+}
+button:hover{
+    background-color: black;
+    color: white;
+}
+
+.a{
+    width: 300px;
+}
+.a > div:first-child{
+    position: relative;
+}
+.a img:first-of-type{
+    aspect-ratio: 16 / 9;
+}
+.a img:nth-of-type(2){
+    width: 80px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 40%);
+}
+.a > div:last-child{
+    text-align: center;
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    line-height: 1;
+}
+.a button{
+    margin-top: 20px;
+}
+.a button, 
+.b>div:last-child button:first-child{
+    background-color: black;
+    color: white;
+}
+.a button:hover,
+.b>div:last-child button:first-child:hover{
+    background-color: white;
+    color: black;
+}
+
+
+.b{
+    width: 440px;
+}
+.b > div:first-child, .c{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 1.3rem;
+}
+.b > div:first-child button, .c button{
+    margin-left: auto;
+}
+.b > div img, .c img{
+    width: 60px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+}
+.b > img{
+    aspect-ratio: 16 / 9;
+}
+.b > div:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 2rem;
+}
+
+.c{
+    width: 400px;
+}
+
+/* who needs media queries when you've got flex-wrap */
