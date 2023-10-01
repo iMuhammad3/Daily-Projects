@@ -1,0 +1,78 @@
+/* Add CSS here */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: #10182f;
+    color: #e1e5f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+}
+img{
+    max-width: 100%;
+}
+
+.card{
+    width: 350px;
+    background-color: #17213f;
+    box-shadow: 0 0 100px #1111;
+    border-radius: 5px;
+    padding: 4rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+.card > img{
+    width: 90px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+}
+.card > div:first-of-type{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+}
+.card > p:first-of-type{
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    fill: #fff;
+    margin-top: 20px;
+}
+.images{
+    display: flex;
+    margin-top: 30px;
+}
+.images img{
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #10182f;
+}
+.images img:first-child{transform: translateX(10px);}
+.images img:last-child {transform: translateX(-10px);}
+
+button{
+    background-color: #6595ff;
+    border: none;
+    padding: .3rem 2rem;
+    border-radius: 99px;
+    cursor: pointer;
+    font-size: inherit;
+    color: inherit;
+    margin-top: 10px;
+}
