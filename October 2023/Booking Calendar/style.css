@@ -1,0 +1,133 @@
+/* Add CSS here */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap");
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --blue: #213773;
+    --white: #f4f7fb;
+}
+
+body{
+    background-color: #f1f6fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+}
+body > button{
+    color: var(--white);
+    background-color: var(--blue);
+    padding: .4rem 1rem;
+    font-size: 22px;
+    border-radius: 4px;
+    border: 2px solid var(--blue);
+    transition: background .3s, color .3s, scale .2s;
+    cursor: pointer;
+    position: absolute;
+}
+body>button:hover{
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.wrapper{
+    width: min(97%, 570px);
+    color: var(--white);
+    box-shadow: 0 0 15px #0003;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: scale .2s;
+}
+
+header{
+    background-color: var(--blue);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header > span{
+    font-size: 40px;
+    line-height: .7;
+    font-weight: 200;
+    cursor: pointer;
+}
+
+main{
+    padding: 1rem 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+section:first-child{
+    color: black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+section:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.card{
+    width: min(350px, 90%);
+    background-color: var(--blue);
+    padding: 1.2rem;
+    border-radius: 7px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px 0;
+    box-shadow: 0 3px 10px -2px rgba(6, 3, 97, 0.5);
+}
+.card > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card > button{
+    background-color: var(--white);
+    color: #113;
+    padding: .3rem .6rem;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.card>button:active{
+    transform: translateY(1px);
+}
+.trainer{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.trainer img{
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+    border: solid color-mix(in oklab, var(--blue) 60%, white);
+}
+
+.hide{
+    scale: 0;
+}
+
+@media (max-width: 380px) {
+    .card{
+        justify-content: center;
+    }
+}
