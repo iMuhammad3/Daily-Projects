@@ -1,0 +1,164 @@
+/* Add CSS here */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+:root{
+    --white: rgb(177, 191, 196);
+    --greyish: #8188a4;
+}
+
+body{
+    background-color: #0c1124;
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.notification{
+    padding: 2rem 1rem;
+    background-color: #090c1b;
+    fill: var(--white);
+    border-radius: 6px;
+    box-shadow: 0 3px 20px #1132;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+/* both divs */
+.notification > div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.num{
+    position: absolute;
+    inset: -6px -6px auto auto;
+    line-height: .7;
+    padding: .3rem;
+    background-color: #4c8f0e;
+    border-radius: 3px;
+    animation: pulse 2s ease infinite;
+}
+
+.inbox{
+    min-width: min(500px, 96%);
+    list-style: none;
+    background-color: #090c1b;
+    padding: 1rem;
+    overflow: hidden;
+    max-height: 1000px;
+    transition: max-height .6s ease;
+}
+.search{
+    position: relative;
+}
+.search svg{
+    position: absolute;
+    fill: var(--greyish);
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1.6em;
+    cursor: pointer;
+}
+.search svg:first-child{
+    left: 10px;
+}
+.search svg:last-child {
+    right: 10px;
+    height: 1.3em;
+    transition: transform .3s;
+}
+input{
+    width: 100%;
+    background-color: #121830;
+    padding: .6rem 3rem;
+    outline: none;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 1rem;
+}
+.inbox li{
+    background-color: #121830;
+    color: var(--greyish);
+    padding: 1.2rem;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 15px;
+    border-left: 4px solid #121830;
+    transition: border-left .2s;
+}
+.inbox li:hover{
+    border-left-color: #5a9516;
+    box-shadow: 0 10px 20px #000;
+}
+li > section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &>p{
+        font-size: 14px;
+    }
+}
+li > section > div{
+    display: flex;
+    align-items: flex-start;
+    line-height: 1;
+    gap: 5px;
+    fill: color-mix(in oklab, var(--greyish), rgb(3, 3, 29) 60%);
+}
+li > span{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+}
+li > svg{
+    fill: var(--greyish);
+    height: 1em;
+}
+
+
+.gold{
+    fill: goldenrod;
+}
+.white{
+    color: var(--white);
+}
+.hide{
+    display: none;
+}
+.hideContent {
+    max-height: 75px;
+    overflow: hidden;
+}
+.rotate{
+    transform: rotateX(180deg);
+}
+
+@keyframes pulse {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .85;
+    }
+    100% {
+        opacity: 1;
+    }
+}
