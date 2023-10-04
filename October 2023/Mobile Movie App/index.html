@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Movie App</title>
+    <link rel="stylesheet" href="output.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gradient-to-tr from-[#686fc9] to-[#79b8ed] flex items-center justify-center  min-h-screen">
+    
+    <div class="w-[330px] max-h-[560px] bg-[#1d2033] overflow-hidden rounded-lg text-lg flex flex-col">
+        <header class="text-blue-300 bg-[#282947] p-3 rounded-t-lg flex items-center justify-center">
+            <h1>Movies 2016</h1>
+        </header>
+        <main class="flex flex-col overflow-scroll translate-y-10 opacity-0 transition-all duration-500">
+            <div class="w-full flex p-4">
+                <input class="w-full mx-auto bg-transparent text-white border border-gray-500 p-2 rounded-full outline-none" type="text" placeholder="Search movies">
+            </div>
+
+            <section class="p-4 flex flex-col gap-y-2">
+                <div class="flex justify-between text-base">
+                    <h1 class="text-blue-300">ACTION / THRILLER</h1>
+                    <span class="text-purple-300 cursor-pointer">See all</span>
+                </div>
+                <ul id="action-section" class="h-60 grid auto-cols-min grid-flow-col overflow-x-scroll gap-x-2"></ul>
+            </section>
+
+            <section class="p-4 flex flex-col gap-y-2">
+                <div class="flex justify-between text-base">
+                    <h1 class="text-blue-300">COMEDY / DRAMA</h1>
+                    <span class="text-purple-300 cursor-pointer">See all</span>
+                </div>
+                <ul id="comedy-section" class="h-60 grid auto-cols-min grid-flow-col overflow-x-scroll gap-x-2"></ul>
+            </section>
+
+            <section class="p-4">
+                <div class="flex justify-between text-base">
+                    <h1 class="text-blue-300">CRIME / HORROR</h1>
+                    <span class="text-purple-300 cursor-pointer">See all</span>
+                </div>
+                <ul id="crime-section" class="h-60 grid auto-cols-min grid-flow-col overflow-x-scroll gap-x-2"></ul>
+            </section>
+        </main>
+    </div>
+
+
+</body>
+</html>
