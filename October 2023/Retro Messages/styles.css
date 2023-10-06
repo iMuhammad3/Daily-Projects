@@ -1,0 +1,89 @@
+/* Add CSS here */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+:root{
+    --green-gradient: linear-gradient(35deg, #10d4ca, #31e29a);
+    --red-gradient: linear-gradient(35deg, #d71844, #ee2d86);
+}
+
+body{
+    background-color: #253046;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 20px;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.message-container{
+    min-width: 280px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px #1113;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+header{
+    width: 140%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 150px;
+    rotate: -15deg;
+    transform: translate(-12%, -45%);
+    padding-bottom: .5rem;
+    transition: all .3s;
+}
+header > svg{
+    rotate: 15deg;
+    transition: rotate .3s;
+}
+
+main{
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+h3{
+    font-weight: 500;
+    font-size: 20px;
+}
+p{
+    font-weight: 400;
+}
+main > button{
+    margin-top: 15px;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    color: #0d8fde;
+    cursor: pointer;
+    font-size: inherit;
+}
+
+.message-container.success header{
+    background: var(--green-gradient);
+}
+
+.message-container.error header{
+    background: var(--red-gradient);
+}
+
+.message-container:hover header{
+    rotate: 0deg;
+    transform: translate(0, -20%);
+    width: 100%;
+}
+.message-container:hover header svg{
+    rotate: 0deg;
+}
