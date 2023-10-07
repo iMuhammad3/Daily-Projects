@@ -1,0 +1,140 @@
+/* Add CSS here */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+}
+
+img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    filter: blur(7px);
+    z-index: -1;
+}
+
+.popup, .links-container{
+    background-color: #f4f4f4;
+    border-radius: 6px;
+    box-shadow: 0 3px 40px #021b3262;
+    transition: scale .3s;
+}
+header{
+    margin: .7rem;
+    padding: 0 .5rem .5rem;
+    border-bottom: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    color: #377bbc;
+}
+#closeBtn{
+    font-size: 39px;
+    line-height: .7;
+    cursor: pointer;
+    font-weight: 200;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+section >:first-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    width: min(300px, 100%);
+    &>p{
+        color: #4580b8;
+        margin-top: 8px;
+    }
+}
+.question-mark{
+    font-size: 70px;
+    line-height: 1;
+    font-weight: 600;
+    color: #f4f4f4;
+    background-color: #d2deea;
+    padding: .1rem 1rem;
+    border-radius: 4px;
+    position: relative;
+}
+.question-mark::after{
+    content: '';
+    position: absolute;
+    background-color: inherit;
+    width: 15px;
+    height: 15px;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+    rotate: 45deg;
+}
+
+section > small{
+    width: min(375px, 100%);
+    font-size: 14px;
+    color: crimson;
+}
+
+.btns{
+    padding: 1rem;
+    display: flex;
+    gap: 0 1rem;
+}
+button{
+    font-size: inherit;
+    border: none;
+    border-radius: 6px;
+    width: 90px;
+    padding: .4rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px #377bbca2;
+    transition: background-color .2s, color .2s;
+}
+button:hover{
+    filter: brightness(1.2);
+}
+.btns button:first-child{
+    background-color: #377bbc;
+    color: #f4f4f4;
+}
+.btns button:last-child{
+    background-color: white;
+    color: #377bbc;
+}
+
+.links-container{
+    position: absolute;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.hide{
+    scale: 0;
+}
