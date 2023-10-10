@@ -1,0 +1,4 @@
+/* Add CSS here */
+.width{
+    width: min(660px, 100%);
+}
