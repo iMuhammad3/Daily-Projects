@@ -1,0 +1,97 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Remove the line below if you don't want to use TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<!-- Change code below this line -->
+<body class="flex flex-col min-h-screen text-lg text-[#020737] [&_button]:transition">
+
+    <header class="border py-4 px-6 flex items-center justify-between md:[&>*]:w-1/3">
+        <div class="flex gap-4 items-center text-gray-300 fill-slate-500">
+            <h1 class=" font-bold">LOGO</h1>
+            <svg id="menuBtn" class="cursor-pointer md:hidden" xmlns="http://www.w3.org/2000/svg" height="1.3em" viewBox="0 0 448 512">
+            <path
+                d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+        </svg>
+        </div>
+        <ul id="menu" class="hidden md:flex
+        [&>li]:px-2 [&>li]:py-1 [&>li]:rounded-md [&>li]:transition [&>li]:cursor-pointer
+        hover:[&>li]:bg-slate-100">
+        <span id="closeMenu" class="absolute top-6 left-10 cursor-pointer md:hidden">&times;</span>
+            <li>Home</li>
+            <li>Articles</li>
+            <li>Pricing</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+        <div class="flex justify-end gap-3 [&>button]:px-3 [&>button]:py-1 [&>button]:cursor-pointer [&>button]:rounded-md">
+            <button class="bg-slate-200 hover:opacity-80">Log In</button>
+            <button class="bg-[#020737] text-white max-[380px]:hidden border-2 border-[#020737] hover:bg-transparent hover:text-[#020737]">Start Free Trial</button>
+        </div>
+    </header>
+
+    <main class="bg-slate-100 flex items-center justify-center py-16">
+        <div class="w-[450px] flex flex-col gap-6 text-center">
+            <h1 class="text-5xl font-semibold">A modern way to build websites.</h1>
+            <p>Empower designers to build profeesional, custom websites in a completely visual canvas with no code.</p>
+            <button class="bg-[#020737] border-2 border-[#020737] text-slate-200 self-center px-5 py-2 rounded-md hover:bg-transparent hover:text-[#020737]">Start Free Trial</button>
+        </div>
+    </main>
+
+    <section class="flex flex-col items-center justify-center gap-3 p-5">
+        <header class="text-sm font-semibold text-center w-[700px] max-w-full flex justify-center gap-3 items-center">
+            <div class="bg-blue-900 h-[0.1px] w-1/4"></div>
+            <h1>We share our thoughts on design</h1>
+            <div class="bg-blue-900 h-[0.1px] w-1/4"></div>
+        </header>
+        <ul class="flex flex-wrap justify-center gap-6 
+        [&>li]:w-full [&>li]:flex [&>li]:flex-col [&>li]:border
+        [&>li]:gap-4 [&>li]:overflow-hidden
+        md:[&>li]:w-72
+        [&>li>div]:overflow-hidden
+        [&_h1]:leading-6 [&_h1]:font-bold [&_h1]:ml-2
+        [&_img]:aspect-video [&_img]:transition [&_img]:duration-500
+        hover:[&_img]:scale-125
+        [&_small]:text-slate-600 [&_small]:ml-2 [&_small]:mb-4">
+            <li>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXJ0JTIwZ2FsbGVyeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                </div>
+                <h1>Redesigning my site increased sales by over 400% in one week.</h1>
+                <small>Jul 1, 2020</small>
+            </li>
+            <li>
+                <div>
+                  <img src="https://images.unsplash.com/photo-1630002931917-964ccb95d0a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGFydCUyMGdhbGxlcnl8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                </div>
+                <h1>Design handoff: What engineers really want to see.</h1>
+                <small>Jul 1, 2020</small>
+            </li>
+            <li>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1569783721854-33a99b4c0bae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8YXJ0JTIwZ2FsbGVyeXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                </div>
+                <h1>A comprehensive list of human-computer interactions.</h1>
+                <small>Jul 1, 2020</small>
+            </li>
+            <li>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHBhaW50fGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60" alt="">
+                </div>
+                <h1>Why do people hate Redesigns?</h1>
+                <small>Jul 1, 2020</small>
+            </li>
+        </ul>
+    </section>
+    
+</body>
+<!-- Change code above this line -->
+
+</html>
