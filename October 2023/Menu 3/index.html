@@ -1,0 +1,125 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Remove the line below if you don't want to use TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<!-- Change code below this line -->
+<body class="bg-[#f4f5fa] text-[#021330] flex justify-center items-center min-h-screen">
+
+    <!-- Warning: this code is not readable, don't try to read it, you will not understand anything from this code -->
+
+    <div class="flex flex-col gap-2 ">
+        <header class="list-none flex gap-2 flex-wrap self-end
+            [&>li]:flex [&>li]:items-center [&>li]:gap-2 [&>li]:rounded-md [&>li]:p-2
+            [&>li]:cursor-pointer hover:[&>li]:bg-white">
+            <li>Products
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <path
+                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                </svg>
+            </li>
+            <li>Solutions
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <path
+                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                </svg>
+            </li>
+            <li id="resources" class="bg-white">Resources
+                <svg class="rotate-180 transition duration-500" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <path
+                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                </svg>
+            </li>
+            <li>Pricing
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512">
+                    <path
+                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                </svg>
+            </li>
+        </header>
+
+        <!-- Main -->
+
+        <main class="md:w-[700px] md:flex gap-2 transition duration-500 origin-[75%_0] bg-white rounded-md px-5 py-7 shadow-lg">
+
+            <!-- help section -->
+
+            <div class="flex flex-col gap-2">
+                <h2 class="text-lg font-semibold">Help</h2>
+                <div class="flex gap-2 border p-2 overflow-hidden rounded-md [&>div]:after:hover:scale-[20]">
+                    <div class="p-3 self-start relative z-10
+                    after:absolute after:inset-0 after:-z-10 after:transition
+                    after:duration-700 after:bg-pink-100 after:rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                            <path
+                                d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8V454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z" />
+                        </svg>
+                    </div>
+                    <div class="z-20">
+                        <h3 class="text-lg font-semibold">Help Center</h3>
+                        <p>Learn how to sign up, install and use our products.</p>
+                    </div>
+                </div>
+                <div class="flex gap-2 border p-2 overflow-hidden rounded-md [&>div]:after:hover:scale-[20]">
+                    <div class="p-3 self-start relative z-10
+                                    after:absolute after:inset-0 after:-z-10 after:transition
+                                    after:duration-700 after:bg-indigo-100 after:rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+                            <path
+                                d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z" />
+                        </svg>
+                    </div>
+                    <div class="z-20">
+                        <h3 class="text-lg font-semibold">Community Forum</h3>
+                        <p>Learn, share and connect with other users</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- learn section -->
+
+            <div class="flex flex-col gap-2">
+                <h2 class="text-lg font-semibold">Learn</h2>
+                <div class="flex gap-2 border p-2 overflow-hidden rounded-md [&>div]:after:hover:scale-[20]">
+                    <div class="p-3 self-start relative z-10
+                                after:absolute after:inset-0 after:-z-10 after:transition
+                                after:duration-700 after:bg-green-100 after:rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                            <path
+                                d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8V454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C529.7 45.3 482.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z" />
+                        </svg>
+                    </div>
+                    <div class="z-20">
+                        <h3 class="text-lg font-semibold">Podcasts</h3>
+                        <p>Learn how to sign up, install and use our products.</p>
+                    </div>
+                </div>
+                <div class="flex gap-2 border p-2 overflow-hidden rounded-md [&>div]:after:hover:scale-[20]">
+                    <div class="p-3 self-start relative z-10
+                                                after:absolute after:inset-0 after:-z-10 after:transition
+                                                after:duration-700 after:bg-yellow-100 after:rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512">
+                            <path
+                                d="M96 128a128 128 0 1 1 256 0A128 128 0 1 1 96 128zM0 482.3C0 383.8 79.8 304 178.3 304h91.4C368.2 304 448 383.8 448 482.3c0 16.4-13.3 29.7-29.7 29.7H29.7C13.3 512 0 498.7 0 482.3zM609.3 512H471.4c5.4-9.4 8.6-20.3 8.6-32v-8c0-60.7-27.1-115.2-69.8-151.8c2.4-.1 4.7-.2 7.1-.2h61.4C567.8 320 640 392.2 640 481.3c0 17-13.8 30.7-30.7 30.7zM432 256c-31 0-59-12.6-79.3-32.9C372.4 196.5 384 163.6 384 128c0-26.8-6.6-52.1-18.3-74.3C384.3 40.1 407.2 32 432 32c61.9 0 112 50.1 112 112s-50.1 112-112 112z" />
+                        </svg>
+                    </div>
+                    <div class="z-20">
+                        <h3 class="text-lg font-semibold">Community Forum</h3>
+                        <p>Learn, share and connect with other users</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+<!-- Change code above this line -->
+
+</html>
