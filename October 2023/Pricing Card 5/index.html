@@ -9,18 +9,28 @@
 
     <!-- Remove the line below if you don't want to use TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js" defer></script>
 
 </head>
 <style>
-    body{
+    body {
         font-family: 'Poppins', sans-serif;
+    }
+
+    .card {
+        --left: 0px;
+        --top: 0px;
+    }
+
+    .card::before {
+        top: var(--top);
+        left: var(--left);
     }
 </style>
 
 <!-- Change code below this line -->
+
 <body class="bg-[#19223f] text-slate-50 flex justify-center items-center min-h-screen">
-    
+
     <div id="wrapper" class="flex justify-center flex-wrap gap-9 my-5"></div>
 
 
