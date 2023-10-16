@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-200 flex justify-center items-center min-h-screen">
+
+    <div class="bg-white w-[85%] max-w-[950px] shadow-lg overflow-hidden md:overflow-auto max-[460px]:w-full md:my-5">
+        <!-- HEADER -->
+        <header class="flex flex-col items-center justify-between text-slate-600 border-b border-slate-400
+        md:flex-row">
+            <section class="flex list-none 
+            [&>li]:py-4 [&>li]:px-5 [&>li]:cursor-pointer
+            hover:[&>li]:text-slate-900 hover:[&>li]:bg-slate-50">
+                <li>Discover</li>
+                <li>Live</li>
+                <li>Jobs</li>
+                <li>Conferences</li>
+            </section>
+            <section class="flex [&>button]:py-4 [&>button]:px-5">
+                <button class="hover:text-gray-900">Log In</button>
+                <button class="bg-gray-800 text-white hover:opacity-90">Get Started</button>
+            </section>
+        </header>
+
+        <div class="py-7 px-6 flex flex-col gap-7
+        md:flex-row-reverse">
+
+        <!-- ASIDE -->
+
+            <aside class="flex flex-col gap-3 p-4 border-2 rounded-lg
+            md:w-1/3 md:h-min">
+                <h1 class="font-semibold text-xl">Discover</h1>
+                <ul class=" [&>li]:p-4 [&>li]:transition [&>li]:duration-300 
+                            [&>li]:rounded 
+                            [&>li]:relative [&>li]:z-10
+                            hover:[&>li]:text-slate-50
+                            hover:after:[&>li]:scale-100
+                             [&>li:hover_p]:text-white
+                            after:[&>li]:absolute after:[&>li]:bg-gray-800
+                            after:[&>li]:-z-10
+                            after:[&>li]:inset-0
+                            after:[&>li]:scale-0
+                            after:[&>li]:rounded-md
+                            after:[&>li]:transition
+                            after:[&>li]:duration-300
+                            [&_h3]:font-semibold 
+                            [&_p]:text-slate-600 [&_p]:w-[85%] [&_p]:text-sm">
+                    <li>
+                        <h3>Business Intelligence</h3>
+                        <p>
+                            Historical, current and predictive views
+                            of business operations.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Commerce</h3>
+                        <p>
+                            Systems, good and services, small and large scale.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Human Resource</h3>
+                        <p>
+                            About people who make up the workforce of an organization.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Internet of Things</h3>
+                        <p>
+                            Humanto-human and human-to-computer interaction.
+                        </p>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- MAIN -->
+
+            <main class="flex flex-col gap-5 md:w-2/3">
+                <section class="text-gray-700 [&>span]:py-1 [&>span]:px-2 [&>span]:bg-gray-200
+                    [&>span]:rounded-full">
+                    <span>Conferences</span>
+                    &nbsp;/&nbsp;
+                    <span>Bergen</span>
+                </section>
+
+                <h1 class="text-2xl font-semibold">Conferences in Bergen</h1>
+
+                <ul class="flex gap-2 
+                [&>li]:px-2 [&>li]:py-1 [&>li]:relative
+                [&>li]:rounded [&>li]:transition
+                [&>li]:z-10
+                hover:[&>li]:text-slate-50
+                hover:after:[&>li]:scale-100
+                after:[&>li]:absolute 
+                after:[&>li]:bg-gray-800
+                after:[&>li]:-z-10
+                after:[&>li]:scale-0
+                after:[&>li]:inset-0
+                after:[&>li]:rounded-md
+                after:[&>li]:transition
+                after:[&>li]:duration-300">
+                    <li class="text-slate-50 bg-slate-800">ALL</li>
+                    <li>TODAY</li>
+                    <li>THIS WEEK</li>
+                    <li>JUNE</li>
+                    <li>JULY</li>
+                </ul>
+
+                <section class="py-4 -mt-3
+                [&>div]:border-b-2 [&>div]:py-4
+                [&_h1]:font-semibold [&_h1]:text-lg
+                [&_small]:text-slate-600">
+                    <div>
+                        <small>Mon, 22 - Fri, 26 Jun 2020 • Bergen</small>
+                        <h1>International Conference on Tests and Proofs(TAP)</h1>
+                    </div>
+                    <div>
+                        <small>Mon, 22 - Fri, 26 Jun 2020 • Bergen</small>
+                        <h1>European Conference on Modelling Foundations</h1>
+                    </div>
+                    <div>
+                        <small><span class="text-pink-500">Postponed</span> • Bergen</small>
+                        <h1>Conference on Graph Transformation</h1>
+                    </div>
+                    <div>
+                        <small>Mon, 22 - Fri, 26 Jun 2020 • Bergen</small>
+                        <h1>International Conference on Tests and Proofs(TAP)</h1>
+                    </div>
+                    <div>
+                        <small class="!text-pink-500">Postponed</small>
+                        <h1>Scandinavian Logic Symposium (SLSS)</h1>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+        
+    </div>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    "sans": ["Poppins", "ui-system"]
+                },
+            }
+        }
+    </script>
+
+</body>
+
+</html>
