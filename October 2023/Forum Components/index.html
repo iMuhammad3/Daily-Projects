@@ -1,0 +1,114 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Remove the line below if you don't want to use TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<!-- Change code below this line -->
+<body class="bg-pink-100 flex justify-center items-center min-h-screen">
+
+    <div class="flex flex-col items-center gap-4
+    [&_section]:bg-white 
+    [&_section]:p-5 [&_section]:rounded-md 
+    [&_section]:shadow-lg [&_section]:shadow-[#d26da041]">
+
+        <section id="popup" class="flex gap-3 items-center absolute transition duration-500 -translate-y-[400px] text-sm">
+            <div class="bg-emerald-100 text-emerald-500 leading-6 p-2 text-3xl rounded-full ">&check;</div>
+            <div>
+                <h1 class="text-base">Solved by <span class="text-pink-500">Charlie_reid</span> in <span class="text-pink-500">post #2</span></h1>
+                <p class="max-w-[450px] mt-1">The answer was identified. All redirects created can be found under the hosting tab of the project settings.</p>
+            </div>
+        </section>
+
+        <section class="md:w-[540px] !p-7
+        [&_input]:border-2 [&_input]:p-3
+        [&_input]:min-w-[300px] [&_input]:outline-none
+        [&_input]:rounded-md [&_input]:w-full
+        [&_select]:basis-full [&_select]:border-2
+        [&_select]:rounded-md [&_select]:p-3
+        [&_select]:cursor-pointer [&_select]:outline-none">
+            <h2 class="font-semibold text-lg mb-2">Create a new Topic</h2>
+            <form class="flex flex-col gap-2" id="form">
+                <input type="text" placeholder="Type title, or paste link here" required autocomplete="off">
+                <div class="flex gap-2">
+                    <select>
+                        <option>Category</option>
+                        <option>Other</option>
+                    </select>
+                    <select required>
+                        <option value="">Tags</option>
+                        <option>Design Help</option>
+                        <option>Publishing Help</option>
+                        <option>Community Resources</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <textarea class="border-2 outline-none rounded-md p-3 resize-none" rows="4" placeholder="Enter your description here" ></textarea>
+                <div class="flex gap-2
+                            [&>button]:p-2 [&>button]:basis-full
+                            [&>button]:rounded-md">
+                    <button type="submit" class="bg-pink-400 text-white border-2 border-pink-400 
+                    overflow-hidden relative z-10 transition
+                    hover:text-pink-500 hover:after:translate-x-0
+                    after:absolute after:inset-0
+                    after:bg-white after:-z-10
+                    after:translate-x-full 
+                    after:duration-500
+                    ">&plus;&nbsp;Create Topic</button>
+                    <button type="reset" class="relative bg-slate-100 text-slate-600 overflow-hidden transition z-10
+                    hover:text-slate-100 hover:after:translate-x-0
+                    after:absolute after:inset-0
+                    after:bg-slate-600
+                    after:-z-10
+                    after:translate-x-full 
+                    after:duration-500
+                    ">Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <div id="topics" class="flex flex-col gap-2 max-h-[250px] overflow-y-scroll md:w-[560px]
+        [&>section]:flex [&>section]:justify-between
+        [&>section]:items-center [&>section]:gap-4
+        [&>section]:transition [&>section]:duration-1000
+        [&_h2]:font-semibold [&_h2]:text-lg
+        [&_img]:w-10 [&_img]:aspect-square 
+        [&_img]:transition
+        hover:[&_img]:rotate-12
+        [&_img]:object-cover [&_img]:rounded-full">
+            <section>
+                <div>
+                    <h2>Navbar Dropdown on Mobile</h2>
+                    <p><div class="rounded-full w-3 aspect-square bg-red-800 inline-block"></div> Publishing Help</p>
+                </div>
+                <div class="flex gap-2">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMHBpY3xlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZSUyMHBpY3xlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                    <img src="https://images.unsplash.com/photo-1577880216142-8549e9488dad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZmlsZSUyMHBpY3xlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h2>Persistent Dark Mode</h2>
+                    <p>
+                    <div class="rounded-full w-3 aspect-square bg-indigo-700 inline-block"></div> Design Help</p>
+                </div>
+                <div class="flex gap-2">
+                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZmlsZSUyMHBpY3xlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                    <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cHJvZmlsZSUyMHBpY3xlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                    <img src="https://images.unsplash.com/photo-1577880216142-8549e9488dad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cHJvZmlsZSUyMHBpY3xlbnwwfDB8MHx8fDA%3D&auto=format&fit=crop&w=800&q=60" alt="">
+                </div>
+            </section>
+        </div>
+
+    </div>
+
+</body>
+<!-- Change code above this line -->
+
+</html>
