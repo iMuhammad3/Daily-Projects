@@ -1,0 +1,7 @@
+/* Add CSS here */
+.radial-gradient1{
+    background: radial-gradient(fuchsia 1%, rebeccapurple 80%);
+}
+.radial-gradient2 {
+    background: radial-gradient(rgb(243, 165, 178) 1%, magenta 80%);
+}
