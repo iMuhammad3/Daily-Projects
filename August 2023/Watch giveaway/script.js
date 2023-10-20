@@ -5,7 +5,7 @@ const secsEl = document.querySelector('#secs')
 
 
 function displayTimeLeft() {
-    const timeRemaining = new Date(2023, 12, 26) - new Date()
+    const timeRemaining = new Date(2026, 12, 26) - new Date()
     const secondsRemaining = Math.floor(timeRemaining / 1000) % 60
     const minutesRemaining = Math.floor(timeRemaining / (1000 * 60)) % 60
     const hoursRemaining = Math.floor(timeRemaining / (1000 * 60 * 60)) % 24
