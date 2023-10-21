@@ -1,0 +1,109 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Remove the line below if you don't want to use TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    "sans": ["Poppins", "ui-system"]
+                }
+            }
+        }
+    </script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<!-- Change code below this line -->
+<body class="bg-[#1a1b39] flex justify-center items-center min-h-screen">
+
+
+
+    <main class="flex flex-col gap-4 my-2 -translate-y-[1000px] transition duration-500">
+        <header class="text-blue-50 self-center w-[357px] text-center flex flex-col gap-4">
+            <h2 class="text-2xl font-semibold">Get the best package for your business</h2>
+            <p>
+                Let's find the boardme solution
+                and service package that's
+                right for your organization!
+            </p>
+        </header>
+        <div class="flex flex-col items-center gap-6 md:flex-row md:items-start
+        [&>section]:bg-white [&>section]:p-8
+        [&>section]:rounded [&>section]:flex
+        [&>section]:flex-col [&>section]:gap-6
+        [&>section]:shadow
+        [&_h3]:font-semibold">
+            <section>
+                <h3 class="text-lg">Pricing is based on: </h3>
+                <ul class="[&>li]:py-4 [&>li]:border-b [&_p]:mt-2">
+                    <li>
+                        <h3>Number of users</h3>
+                        <p>People who will be guided.</p>
+                    </li>
+                    <li>
+                        <h3>Feature-Set</h4>
+                        <p>Only pay what you use.</p>
+                    </li>
+                </ul>
+            </section>
+            <section class="items-start">
+                <h3 class="text-lg">What we offer</h3>
+                <ul class="max-w-xs
+                    [&>li]:py-2 [&>li]:flex 
+                    [&>li]:items-center
+                    [&>li]:gap-2
+                    [&_span]:px-[9.5px] [&_span]:py-1
+                    [&_span]:bg-slate-200 [&_span]:rounded-full">
+                    <li>
+                        <span>&check;</span>
+                        <p>Full ownership of the purchased product</p>
+                    </li>
+                    <li>
+                        <span>&check;</span>
+                        <p>Complete control over your data</p>
+                    </li>
+                    <li>
+                        <span>&check;</span>
+                        <p>Dedicated environment</p>
+                    </li>
+                    <li>
+                        <span>&check;</span>
+                        <p>Customer success program</p>
+                    </li>
+                    <li>
+                        <span>&check;</span>
+                        <p>Periodic product updates</p>
+                    </li>
+                </ul>
+                <button class="px-5 py-2 border-2 border-blue-600 bg-blue-600 rounded-full text-white transition hover:bg-transparent hover:text-blue-600" onclick="alert('This is a quote')">Get a quote</button>
+            </section>
+        </div>
+    </main>
+
+
+    <!-- background -->
+
+    <div class="bg-[#1a1b39] -z-10 absolute -inset-20 flex justify-center items-center
+    [&_div]:bg-blue-600 [&_div]:absolute [&_div]:aspect-square 
+    [&_div]:rounded-full [&_div]:transition
+    [&_div]:duration-1000">
+        <section class="relative w-[80%] h-[80%]">
+            <div class="circle w-96 right-6 top-6 scale-0"></div>
+            <div class="circle w-64 left-6 bottom-12 scale-0"></div>
+        </section>
+    </div>
+    
+</body>
+<!-- Change code above this line -->
+
+</html>

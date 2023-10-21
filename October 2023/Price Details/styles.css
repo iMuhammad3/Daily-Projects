@@ -1,0 +1,20 @@
+/* Add CSS here */
+
+@keyframes rotate {
+    0%{
+        transform: rotateY(0) rotateX(0);
+    }
+    30%{
+        transform: rotateY(180deg) rotateX(0);
+    }
+    60%{
+        transform: rotateY(180deg) rotateX(180deg);
+    }
+    90%{
+        transform: rotateY(0) rotateX(0);
+    }
+}
+
+.circle{
+    animation: rotate 10s ease-in-out 5000ms infinite forwards;
+}
