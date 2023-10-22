@@ -1,0 +1,15 @@
+/* Add CSS here */
+
+@keyframes fly {
+    0%{
+        transform: translate(-900px, 900px);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
+
+
+img{
+    animation: fly 3s ease-out;
+}
