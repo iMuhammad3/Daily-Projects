@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    "sans": ["Poppins", "sans-serif"]
+                }
+            }
+        }
+    </script>
+    <script src="script.js" defer></script>
+</head>
+
+<!-- Change code below this line -->
+<body class="bg-blue-100 select-none flex justify-center items-center min-h-screen">
+
+    <div class="shadow-[0_4px_20px_#00a2] relative my-10">
+        <div class="absolute -z-10 -translate-x-11 -translate-y-14 w-96 h-48 rounded-2xl bg-gradient-to-b from-cyan-400 to-sky-600"></div>
+        <main class="bg-white bg-opacity-30 p-8 flex flex-col gap-8 rounded-t-lg">
+            <section class="text-white">
+                <h1 class="text-xl font-semibold">Updates</h1>
+                <small>4 in the last 2 hours</small>
+            </section>
+            <section class="flex gap-6">
+                <div>
+                    <div id="line" class="w-0.5 bg-cyan-400 flex flex-col items-center justify-around"></div>
+                </div>
+                <ul class="w-52 flex flex-col gap-3
+                [&>li]:px-5 [&>li]:py-4 
+                [&>li]:rounded-lg
+                [&>li]:bg-white 
+                [&>li]:shadow-[0_2px_8px_#00a1]
+                [&>li]:border-2
+                [&>li]:border-white
+                [&>li]:transition
+                hover:[&>li]:border-2
+                hover:[&>li]:border-cyan-400
+                hover:[&>li]:bg-transparent
+                hover:[&>li]:text-cyan-500
+                [&_p]:text-sm">
+                    <li>
+                        <b>16:30</b>
+                        <p>Believing is The Absence of Doubt</p>
+                    </li>
+                    <li>
+                        <b>15:22</b>
+                        <p>Start With A Baseline</p>
+                    </li>
+                    <li>
+                        <b>14:15</b>
+                        <p>Break Through Self Doubt And Fear</p>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer class="bg-white p-6 grid place-items-center rounded-b-lg">
+            <button class="border-2 rounded-md p-3 w-3/4 hover:shadow-[0_2px_8px_#00a1]">Show all updates</button>
+        </footer>
+    </div>
+    
+</body>
+<!-- Change code above this line -->
+
+</html>
