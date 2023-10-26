@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    "sans": ["Poppins", "ui-system"]
+                }
+            }
+        }
+    </script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<!-- Change code below this line -->
+<body class="bg-sky-800 text-white select-none flex justify-center items-center min-h-screen">
+
+    <div class="bg-sky-900 p-10 flex flex-col gap-4 w-96">
+        <header class="flex items-center gap-5 self-end">
+            <svg class="cursor-pointer" xmlns="http://www.w3.org/2000/svg" height="1.8em" fill="#fff" viewBox="0 0 448 512">
+                <path
+                    d="M224 0c-17.7 0-32 14.3-32 32V49.9C119.5 61.4 64 124.2 64 200v33.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416H424c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4V200c0-75.8-55.5-138.6-128-150.1V32c0-17.7-14.3-32-32-32zm0 96h8c57.4 0 104 46.6 104 104v33.4c0 47.9 13.9 94.6 39.7 134.6H72.3C98.1 328 112 281.3 112 233.4V200c0-57.4 46.6-104 104-104h8zm64 352H224 160c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z" />
+            </svg>
+            <img class="w-10 h-10 rounded-full cursor-pointer" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
+        </header>
+        <main class="bg-sky-800 p-4 transition duration-300 origin-[95%_0] rounded shadow-lg shadow-[rgba(9,29,40,0.2)]">
+            <section class="flex gap-4 p-3 border-b border-cyan-600">
+                <img class="w-20 h-20 rounded-full" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
+                <div class="flex flex-col">
+                    <h3 class="font-semibold">Stella</h3>
+                    <small>Stella@gmail.com</small>
+                    <button class="px-3 py-1 bg-cyan-500 rounded-sm text-sm mt-2">Account Settings</button>
+                </div>
+            </section>
+            <ul class="py-2 border-b border-cyan-600
+            [&>li]:flex
+            [&>li]:gap-3
+            [&>li]:py-2
+            [&>li]:px-1
+            [&>li]:rounded
+            [&>li]:cursor-pointer
+            hover:[&>li]:bg-sky-700
+            [&_img]:rounded-full
+            [&_img]:h-12
+            [&_img]:w-12">
+                <li>
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
+                    <div>
+                        <h3>Stella</h3>
+                        <small>suport@hgmai.com</small>
+                    </div>
+                </li>
+                <li>
+                    <img src="https://shismqklzntzxworibfn.supabase.co/storage/v1/object/public/avatars/a73db516-cdf9-4761-94ce-f6ca234f030e.jpg" alt="">
+                    <div>
+                        <h3>Richard</h3>
+                        <small>RichardIsRich@gmail.com</small>
+                    </div>
+                </li>
+            </ul>
+            <footer class="flex items-center justify-between py-4">
+                <div id="addAcc" class="leading-3 w-8 h-8 text-2xl cursor-pointer font-light grid place-items-center border border-cyan-400 rounded-full">+</div>
+                <button class="py-1 px-5 rounded-sm border border-cyan-400">Sign out</button>
+            </footer>
+        </main>
+    </div>
+
+    <div id="modal-wrapper" class="hidden absolute -inset-20 bg-[rgba(5,9,20,.4)] grid place-items-center">
+        <form class="flex flex-col gap-2 bg-sky-800 p-5 rounded w-72 
+        [&_input]:rounded-sm
+        [&_input]:p-2
+        [&_input]:text-black">
+            <input type="text" placeholder="Enter name">
+            <input type="text" placeholder="Enter email">
+            <input type="text" placeholder="Image url">
+            <button class="mt-2 bg-cyan-600 self-center px-3 py-1 rounded">Add Account</button>
+        </form>
+    </div>
+    
+</body>
+<!-- Change code above this line -->
+
+</html>
