@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Remove the line below if you don't want to use TailwindCSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<!-- Change code below this line -->
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+    <div class="bg-white p-10 flex flex-col items-start gap-5 rounded-md shadow-lg shadow-[rgba(50,2,30,.1)]
+            [&_h1]:text-fuchsia-800
+            [&_h1]:font-bold">
+         <h1 class="text-xl">Settings</h1>
+         <section>
+            <h1>Language</h1>
+            <p>
+                Let us know which language you're most comfortable using.<br>
+                You can change back at any time.
+            </p>
+         </section>
+         <select class="border-2 w-44 p-2 rounded">
+            <option value="English">English</option>
+            <option value="French">French</option>
+         </select>
+         <hr class="w-full">
+         <section class="flex justify-between w-full">
+            <div>
+                <h1>Autoplay videos</h1>
+                <p>Choose if you want to autoplay on your browser</p>
+            </div>
+            <div class="w-14 h-7 border-2 rounded-full flex items-center">
+                <div class="w-5 h-5 rounded-full cursor-pointer ml-2 bg-fuchsia-800 translate-x-full"></div>
+            </div>
+         </section>
+        <section class="flex justify-between w-full">
+            <div>
+                <h1>Show profile photos</h1>
+                <p>Choose whether to show or hide profile photos of other members.</p>
+            </div>
+            <div class="w-14 h-7 border-2 rounded-full flex items-center">
+                <div class="w-5 h-5 cursor-pointer bg-gray-500 rounded-full mx-1"></div>
+            </div>
+        </section>
+        <div class="flex flex-col gap-2 md:flex-row
+        [&>button]:w-24 [&>button]:p-2 [&>button]:rounded [&>button]:border-2">
+            <button class="bg-pink-600 text-white border-pink-600">Save</button>
+            <button class=" text-gray-500">Cancel</button>
+        </div>
+    </div>
+
+    <footer class="absolute bottom-0 w-full -z-10">
+        <div class="bg-pink-600 w-full h-20"></div>
+        <div class="bg-fuchsia-700 w-full h-20"></div>
+    </footer>
+    
+</body>
+<!-- Change code above this line -->
+
+</html>
