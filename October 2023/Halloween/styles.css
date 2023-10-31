@@ -1,0 +1,35 @@
+/* Add CSS here */
+button{
+    background-size: 100% auto;
+    border-radius: 10px;
+    padding: 15px ;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0 3px 20px -5px #1136;
+    transition: background-position .5s;
+}
+
+button:first-of-type{
+    background-image: url('https://images.pexels.com/photos/3262249/pexels-photo-3262249.jpeg?auto=compress&cs=tinysrgb&w=600');
+    transition: background-position .5s;
+    &:hover{
+        background-position: bottom;
+    }
+}
+button:last-of-type{
+    color: black;
+    background-image: url('https://media.istockphoto.com/id/1174282589/photo/halloween-jack-o-lantern-bucket-filled-with-candy-isolated-on-white.jpg?s=612x612&w=0&k=20&c=tuvcuOM1xD8Pfj9yLl9mjYqyssOxr_bqjuTZwykE-CE=');
+    background-position: 60px 100px;
+    &:hover {
+        background-position: -150px 100px;
+    }
+}
+
+img{
+    aspect-ratio: 16/9;
+    transition: scale .5s;
+    object-fit: cover;
+    &:hover{
+        scale: 1.25;
+    }
+}
