@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module">
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    sans: ["Poppins, sans-serif"],
+                    serif: ["ui-system", "serif"],
+                }
+            }
+        }
+    </script>
+    <script type="module" src="index.jsx"></script>
+</head>
+
+<body class="bg-[#28292b] flex justify-center items-center min-h-screen">
+    <div id="root"></div>
+    <script type="text/babel">
+        // React code goes here
+        const Cards = [
+        {
+        id: 0,
+        img: "https://github.com/iMuhammad3/images/blob/master/1wheat.png?raw=true",
+        price: 4,
+        title: "Starting up",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam recusandae, culpa.",
+        benefits: [
+        "1 Domain",
+        "Email Support",
+        "200 GB Cloud space"
+        ]
+        },
+        {
+        id: 1,
+        img: "https://github.com/iMuhammad3/images/blob/master/2wheat.png?raw=true",
+        price: 12,
+        title: "Growing business",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam recusandae, culpa.",
+        benefits: [
+        "10 Domain",
+        "Email and Phone Support",
+        "500 GB Cloud space"
+        ]
+        },
+        {
+        id: 2,
+        img: "https://github.com/iMuhammad3/images/blob/master/3wheat.png?raw=true",
+        price: 52,
+        title: "Enterprise",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam recusandae, culpa.",
+        benefits: [
+        "100 Domain",
+        "24/7 Email Support",
+        "Unlimited Cloud space"
+        ]
+        },
+        ]
+        function App() {
+        return (
+        <main className="flex flex-wrap gap-6 justify-center">
+            {Cards.map(card =>
+            <Card card={card} />)}
+        </main>
+        )
+        }
+        
+        function Card({card}){
+        let bgColor = "bg-red-500"
+        if(card.id === 0) bgColor = "bg-sky-500"
+        if(card.id === 1) bgColor = "bg-purple-500"
+        return (
+        <section className="rounded-sm w-72 text-gray-100 shadow-lg relative overflow-hidden">
+            <div className={bgColor
+                + " text-center w-44 p-2 shadow absolute right-0 rotate-[42deg] translate-x-11 translate-y-5 shadow-md" }>
+                <b>${card.price}</b>/mo</div>
+            <header className="flex flex-col gap-3 px-6 py-6 bg-[#303133]">
+                <img className="w-20" src={card.img} alt="" />
+                <h1 className="mt-1 text-xl leading-4 text-[#fdcf53]">{card.title.toUpperCase()}</h1>
+                <p>{card.description}</p>
+            </header>
+            <ul className="flex flex-col gap-3 bg-[#232426] px-6 py-8">
+                {card.benefits.map(benefit =>
+                <Benefit benefit={benefit} />)}
+                <button className="mt-6 bg-[#1c1d1f] text-[#fdcf53] p-3 rounded-sm shadow-md hover:bg-[#fdcf53] hover:text-[#1c1d1f] transition">SELECT</button>
+            </ul>
+        </section>
+        )
+        }
+        
+        function Benefit({benefit}){
+        return (
+        <li className="flex items-center gap-3">
+            <span className="text-[#fdcf53]">✔</span>
+            <span>{benefit}</span>
+        </li>
+        )
+        }
+        
+        const root = ReactDOM.createRoot(document.getElementById('root'))
+        root.render(
+        <App />)
+    </script>
+</body>
+
+</html>
