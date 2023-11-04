@@ -1,0 +1,212 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script type="module">
+            tailwind.config = {
+                theme: {
+                    fontFamily: {
+                        sans: ["Poppins, sans-serif"],
+                        serif: ["ui-system", "serif"],
+                    },
+                },
+            };
+        </script>
+    </head>
+
+    <body
+        class="bg-gradient-to-tr from-cyan-400 to-sky-500 flex justify-center items-center min-h-screen"
+    >
+        <div id="root"></div>
+        <script type="text/babel" data-type="module">
+            // React code goes here
+            function App() {
+                const [currentItem, setCurrentItem] =
+                    React.useState("Shopping List");
+                return (
+                    <div className="select-none flex flex-col min-[520px]:flex-row rounded-sm overflow-hidden shadow-lg">
+                        <Aside setCurrentItem={setCurrentItem} />
+                        <Main currentItem={currentItem} />
+                    </div>
+                );
+            }
+
+            function Main({ currentItem }) {
+                function current() {
+                    if (currentItem === "To Do List") return <ToDoList />;
+                    if (currentItem === "Reminder") return <Reminder />;
+                    if (currentItem === "Shopping List")
+                        return <ShoppingList />;
+                    if (currentItem === "Other") return <Other />;
+                }
+                return (
+                    <main className="bg-slate-50 w-80 pb-4 h-80">
+                        {current()}
+                    </main>
+                );
+            }
+
+            function toggleItem(e) {
+                const elem = e.target;
+                if (elem.tagName === "P") {
+                    elem.parentElement.classList.toggle("line-through");
+                    elem.parentElement.classList.toggle("text-slate-600");
+                } else if (elem.tagName === "LI") {
+                    elem.classList.toggle("line-through");
+                    elem.classList.toggle("text-slate-600");
+                }
+            }
+
+            function ShoppingList() {
+                const [list, setList] = React.useState([
+                    {
+                        category: "GROCERIES",
+                        items: ["Butter", "Cheese", "Bread"],
+                    },
+                    {
+                        category: "ELECTRONICS",
+                        items: ["MacBook Pro", "Microwave"],
+                    },
+                ]);
+                function Li({ name }) {
+                    return (
+                        <li
+                            className="cursor-pointer hover:bg-slate-200 px-6 py-1"
+                            onClick={toggleItem}
+                        >
+                            {name}
+                        </li>
+                    );
+                }
+                function Section({ name, items }) {
+                    return (
+                        <section className="pb-4">
+                            <h2 className="text-lg px-4 py-1.5 bg-slate-300">
+                                {name}
+                            </h2>
+                            <ul className="text-slate-800 flex flex-col">
+                                {items.map(item => (
+                                    <Li name={item} />
+                                ))}
+                            </ul>
+                        </section>
+                    );
+                }
+                return (
+                    <>
+                        {list.map(l => (
+                            <Section name={l.category} items={l.items} />
+                        ))}
+                    </>
+                );
+            }
+            function ToDoList() {
+                const [todos, setTodos] = React.useState([
+                    "Run",
+                    "iCodeThis challenge",
+                    "Eats",
+                ]);
+                function TodoItem({ todo }) {
+                    return (
+                        <li
+                            onClick={toggleItem}
+                            className="group border-b px-4 py-1.5 cursor-pointer flex items-center justify-between hover:bg-slate-200"
+                        >
+                            <p>{todo}</p>
+                            <span
+                                onClick={e => e.target.parentElement.remove()}
+                                className="opacity-0 group-hover:opacity-100 transition"
+                            >
+                                x
+                            </span>
+                        </li>
+                    );
+                }
+                return (
+                    <>
+                        <Title title="To Do" />
+                        <ul className="">
+                            {todos.map(todo => (
+                                <TodoItem todo={todo} />
+                            ))}
+                        </ul>
+                    </>
+                );
+            }
+            function Reminder() {
+                const [reminders, setReminders] = React.useState([
+                    "Pick the kids up",
+                    "Beat cousin at FIFA",
+                    "Show javascript who's boss",
+                ]);
+                return (
+                    <>
+                        <Title title="REMINDERS" />
+                        <ul className="px-8 list-disc">
+                            {reminders.map(r => (
+                                <li>{r}</li>
+                            ))}
+                        </ul>
+                    </>
+                );
+            }
+            function Other() {
+                return <Title title="Others" />;
+            }
+            function Title({ title }) {
+                return (
+                    <h1 className="text-2xl underline text-center py-3">
+                        {title}
+                    </h1>
+                );
+            }
+
+            function Aside({ setCurrentItem }) {
+                const items = [
+                    "Reminder",
+                    "To Do List",
+                    "Shopping List",
+                    "Other",
+                ];
+                function Item({ name }) {
+                    return (
+                        <li
+                            onClick={() => setCurrentItem(name)}
+                            className="group px-5 py-1.5 flex items-center justify-between hover:bg-slate-100 hover:text-slate-900
+        cursor-pointer transition"
+                        >
+                            <span>{name}</span>
+                        </li>
+                    );
+                }
+                return (
+                    <aside className="bg-slate-700 text-slate-100 pb-8">
+                        <input
+                            className="outline-none bg-slate-500 px-3 py-1 m-4 rounded-full"
+                            type="text"
+                            placeholder="Search"
+                        />
+                        <ul>
+                            {items.map(item => (
+                                <Item name={item} />
+                            ))}
+                        </ul>
+                    </aside>
+                );
+            }
+
+            const root = ReactDOM.createRoot(document.getElementById("root"));
+            root.render(<App />);
+        </script>
+    </body>
+</html>
