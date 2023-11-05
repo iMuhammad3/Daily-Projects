@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        *{
+            font-family: "Poppins", sans-serif;
+        }
+        .rotate-y-90{
+            transform: rotateY(90deg);
+        }
+    </style>
+    <script src="script.js" defer></script>
+</head>
+
+<!-- Change code below this line -->
+<body class="bg-sky-100 flex justify-center items-center min-h-screen">
+
+    <div class="min-h-[440px] absolute bg-white flex flex-col items-center pb-8 rounded-lg shadow-lg shadow-blue-900/20 transition duration-500">
+
+        <img src="https://github.com/iMuhammad3/images/blob/master/ceiling-lamp.png?raw=true" alt="">
+        <form class="p-8 flex flex-col gap-4
+                [&_input]:border-2 
+                [&_input]:rounded-sm  
+                [&_input]:px-4
+                [&_input]:py-2
+                [&_input]:outline-none">
+            <div>
+                <h3>USERNAME</h3>
+                <input type="text" placeholder="Enter your username">
+            </div>
+            <div>
+                <h3>PASSWORD</h3>
+                <input type="text" placeholder="Enter your password">
+            </div>
+            <button class="bg-blue-500 text-white p-2 mt-2 rounded-sm shadow hover:opacity-90">LOG IN</button>
+        </form>
+    </div>
+
+    <div id="loggedin" class="bg-[#293766] pb-14 min-h-[440px] w-[266px] flex items-center flex-col-reverse gap-4 rounded-lg shadow-lg shadow-blue-900/20 rotate-y-90 transition duration-500 hidden">
+        <div class="hidden flex items-center gap-2
+        [&>img]:w-10">
+            <img src="https://github.com/iMuhammad3/images/blob/master/idea%20grey.png?raw=true" alt="">
+            <input id="range" type="range" value="100">
+            <img src="https://github.com/iMuhammad3/images/blob/master/idea%20yellow.png?raw=true" alt="">
+        </div>
+        <button id="toggleBtn" class="text-blue-400 bg-[#1d2c57] w-20 h-20 rounded-full leading-3 font-bold shadow-[0_1px_1px_#0005,0_0_0_7px_#2d3d6e] transition duration-500 active:scale-95">OFF</button>
+    </div>
+
+    <div id="modal-container" class="absolute top-4 flex flex-col-reverse gap-2"></div>
+    
+</body>
+<!-- Change code above this line -->
+
+</html>
