@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<!-- Change code below this line -->
+<body class=" flex justify-center items-center min-h-screen">
+
+    <img class="min-h-screen object-cover absolute" src="https://images.unsplash.com/photo-1520363027780-797c0e65eed5?auto=format&fit=crop&q=80&w=2670&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+    <div class="w-full min-h-screen bg-gradient-to-tr from-teal-700/90 to-green-400/20 absolute"></div>
+
+    <main class="z-20 text-white flex flex-col gap-10">
+        <section>
+            <h1 class="text-6xl font-serif">Trip to Serbia</h1>
+            <p class="mt-3">Monday, 1 December 2023</p>
+        </section>
+
+        <section class=" flex gap-3
+        [&>div]:flex 
+        [&>div]:flex-col
+        [&>div]:items-center
+        [&_b]:text-7xl
+        [&_b]:shadow-[0_5px_20px_-3px_#0003]
+        [&_b]:bg-white/25
+        [&_b]:w-36 [&_b]:h-40
+        [&_b]:grid [&_b]:place-items-center
+        [&_span]:text-3xl">
+            <div>
+                <b id="days" class="rounded-l-3xl">24</b>
+                <span>Days</span>
+            </div>
+            <div>
+                <b id="hours">12</b>
+                <span>Hours</span>
+            </div>
+            <div>
+                <b id="mins">45</b>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <b id="secs" class="rounded-r-3xl">04</b>
+                <span>Seconds</span>
+            </div>
+        </section>
+
+        <p class="w-[580px] text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim eaque pariatur deserunt, animi doloribus illum hic voluptatum pariatur eum illo quia officiis ratione laudantium minima! Neque pariatur error commodi reprehenderit.</p>
+    </main>
+    
+</body>
+<!-- Change code above this line -->
+
+</html>
