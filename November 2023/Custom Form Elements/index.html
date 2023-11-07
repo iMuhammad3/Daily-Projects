@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<!-- Change code below this line -->
+<body class="bg-[#0a1d3b] select-none flex justify-center items-center min-h-screen">
+
+    <div class="text-gray-100 flex flex-col items-center gap-8 md:grid grid-cols-2 place-items-center
+    [&>section]:p-8
+    [&>section]:rounded-lg 
+    [&>section]:shadow-lg">
+
+        <section class="bg-[#fb745c] flex
+        [&>div]:flex [&>div]:flex-col
+        [&>div]:items-center
+        [&>div]:gap-2
+        [&>div]:w-24
+        [&_span]:w-9
+        [&_span]:h-9
+        [&_span]:rounded-full
+        [&_span]:grid 
+        [&_span]:place-items-center
+        [&_span]:bg-white/40">
+            <div>
+                <span class="font-bold text-xl">&checkmark;</span>
+                <p>Audio</p>
+            </div>
+            <div>
+                <span class="shadow-[inset_0_0_0_10px_#fff] !bg-white/10"></span>
+                <p>Video</p>
+            </div>
+            <div>
+                <span></span>
+                <p>Performance</p>
+            </div>
+        </section>
+
+        <section class="bg-[#9b348f] flex flex-col gap-4">
+            <div class="flex gap-1
+            [&>div]:w-12 [&>div]:h-1 
+            [&>div]:bg-white
+            [&>div]:rounded-full">
+                <div></div>
+                <div class="!bg-opacity-40"></div>
+            </div>
+            <h3>Rate your experience</h3>
+            <ul id="rating-container" class="flex
+            [&>li]:w-10
+            [&>li]:h-10
+            [&>li]:grid
+            [&>li]:place-items-center
+            [&>li]:rounded-full
+            [&>li]:cursor-pointer
+            [&>li]:transition
+            hover:[&>li]:bg-white/20">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li class="bg-white/20">4</li>
+                <li>5</li>
+            </ul>
+        </section>
+
+        <section class="bg-[#da627d] flex flex-col gap-2">
+            <h3 class="w-40 text-center self-center">How do you rate our services</h3>
+            <div id="stars-container" class="flex
+            [&>span]:w-10
+            [&>span]:h-10
+            [&>span]:text-2xl
+            [&>span]:grid
+            [&>span]:place-items-center
+            [&>span]:rounded-full
+            [&>span]:cursor-pointer
+            [&>span]:transition
+            hover:[&>span]:bg-white/20">
+                <span>★</span>
+                <span>★</span>
+                <span>☆</span>
+                <span>☆</span>
+                <span>☆</span>
+            </div>       
+            <div class="flex justify-between">
+                <small>Very bad</small>
+                <small>Very good</small>
+            </div>  
+        </section>
+
+        <section class="bg-[#8443d5] flex flex-col gap-4">
+            <h3>What didn't work properly?</h3>
+            <ul class="flex flex-col gap-2">
+                <label>
+                    <input type="checkbox" >
+                    <span>Video was blurry</span>
+                </label>
+                <label>
+                    <input type="checkbox" >
+                    <span>Sound wasn't working</span>
+                </label>
+                <label>
+                    <input type="checkbox" >
+                    <span>App was crashing</span>
+                </label>
+                <label>
+                    <input type="checkbox" >
+                    <span>My brain</span>
+                </label>
+            </ul>
+        </section>
+
+    </div>
+    
+</body>
+<!-- Change code above this line -->
+
+</html>
