@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script> 
+    <script src="script.js" defer></script>
+
+</head>
+
+<!-- Change code below this line -->
+
+<body class="bg-sky-100 flex justify-center items-center min-h-screen">
+
+    <div class="md:w-[550px] shadow-md shadow-sky-600/10">
+        <header
+            class="flex justify-between items-center px-16 py-10 text-sky-50 bg-gradient-to-r from-sky-500 to-cyan-400">
+            <section class="flex gap-4">
+                <div id="correct">2 correct</div>
+                <div id="wrong">1 wrong</div>
+            </section>
+            <section id="time">
+                08:52
+            </section>
+        </header>
+        <main class="flex flex-col items-center bg-sky-50 px-16 pb-10 text-slate-700">
+            <div class="w-full flex flex-col gap-4 bg-white px-6 py-4 -translate-y-6 shadow-md shadow-gray-600/10">
+                <section>
+                    <h4 id="questionRemain" class="text-slate-500">Question 2(8 remaining)</h4>
+                    <h1 id="question" class="text-lg mt-2">
+                        What day is PurpleWeek?
+                    </h1>
+                </section>
+                <section>
+                    <h4 class="text-slate-500">Options</h4>
+                    <ul id="options-container" class="flex flex-col gap-1
+                    [&>li]:flex 
+                    [&>li]:items-center 
+                    [&>li]:gap-2 
+                    [&>li]:px-3 
+                    [&>li]:py-1 
+                    [&>li]:rounded-xl 
+                    hover:[&>li]:text-sky-50 
+                    hover:[&>li]:bg-gradient-to-r 
+                    [&>li]:from-sky-500 
+                    [&>li]:to-cyan-400
+                    [&>li]:cursor-pointer
+                    [&_span]:text-xl [&_span]:font-bold">
+                        <li>
+                            <span>A</span>
+                            <p>Never</p>
+                        </li>
+                        <li>
+                            <span>B</span>
+                            <p>24 November</p>
+                        </li>
+                        <li>
+                            <span>C</span>
+                            <p>It's a whole week you silly goose</p>
+                        </li>
+                        <li>
+                            <span>D</span>
+                            <p>30 November</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <section class="flex flex-col md:flex-row gap-2 
+            [&>button]:px-5 
+            [&>button]:py-2 
+            [&>button]:rounded-lg 
+            [&>button]:border 
+            [&>button]:border-sky-400 
+            [&>button]:transition">
+                <button id="nextBtn"
+        class=' bg-sky-400 text-sky-50 hover:bg-sky-50 hover:text-sky-400'>NEXT</button>
+            </section>
+        </main>
+    </div>
+
+</body>
+<!-- Change code above this line -->
+
+</html>
