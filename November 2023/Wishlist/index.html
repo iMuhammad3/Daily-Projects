@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                'sm': '480px',
+                'md': '615px',
+                }
+            }
+        }
+    </script>
+    <script src="script.js" defer></script>
+
+</head>
+
+<!-- Change code below this line -->
+<body class="bg-gradient-to-tr from-[#4b4fa8] via-[#885fcd] to-[#5179d9] flex justify-center items-center min-h-screen font-[Montserrat]">
+    
+    <div class="bg-white/80 text-gray-600 px-6 pb-16 md:w-[640px]">
+        <header class="py-4 flex items-center justify-between">
+            <section>
+                <h1 class="text-xl font-semibold">MY WISHLIST</h1>
+                <p>23 november, 2016</p>
+            </section>
+            <button id="sendBtn" class="bg-white text-sky-600 px-4 py-1.5 shadow active:shadow-inner">Send Wishlist</button>
+        </header>
+        <ul class="flex flex-col gap-2 overflow-hidden
+        [&>li]:flex
+        [&>li]:flex-col
+        md:[&>li]:flex-row
+        [&>li]:items-center
+        md:[&>li]:items-start
+        [&>li]:text-center
+        md:[&>li]:text-left
+        [&>li]:gap-2
+        [&>li]:pr-2
+        [&>li]:py-2
+        [&>li]:transition
+        [&>li]:duration-500
+        [&>li]:bg-white
+        [&_img]:w-36
+        [&_img]:h-[90px]
+        [&_img]:object-cover
+        [&_h3]:text-lg
+        [&_h3]:text-transparent
+        [&_h3]:font-semibold
+        [&_h3]:bg-gradient-to-r
+        [&_h3]:bg-clip-text
+        [&_p]:tracking-tight
+        [&_div]:flex
+        [&_div]:flex-col
+        md:[&_div]:items-end
+        [&_div]:justify-between
+        [&_button]:w-36
+        [&_button]:py-1.5
+        [&_button]:border-2
+        [&_button]:bg-gradient-to-r
+        [&_button]:text-white
+        [&_button]:rounded-full
+        [&_span]:text-4xl
+        [&_span]:leading-5
+        [&_span]:cursor-pointer
+        [&_span]:text-gray-400
+        [&_span]:font-extralight
+        ">
+            <li>
+                <img src="https://www.pngall.com/wp-content/uploads/5/Black-Coffee-Mug-Transparent.png" alt="">
+                <section>
+                    <h3>Ceramic Travel Coffee Mug</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, nemo.</p>
+                </section>
+                <div>
+                    <span class="closeBtn">&times;</span>
+                    <b>$23.49</b>
+                    <button class="addToCart">Add to Cart</button>
+                </div>
+            </li>
+            <li>
+                <img src="https://www.freepnglogos.com/uploads/plate-png/harriets-childrens-afternoon-tea-plate-harriets-cafe-17.png" alt="">
+                <section>
+                    <h3>Simple Ceramic Plate</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, nemo.</p>
+                </section>
+                <div>
+                    <span class="closeBtn">&times;</span>
+                    <b>$42.49</b>
+                    <button class="addToCart">Add to Cart</button>
+                </div>
+            </li>
+            <li>
+                <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/glass-jar-d7aRDlE-600.jpg" alt="">
+                <section>
+                    <h3>Empty Glass Jar</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut, nemo.</p>
+                </section>
+                <div>
+                    <span class="closeBtn">&times;</span>
+                    <b>$99.99</b>
+                    <button class="addToCart">Add to Cart</button>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div id="modal-container" class="absolute top-6 flex flex-col gap-2"></div>
+
+</body>
+<!-- Change code above this line -->
+
+</html>
