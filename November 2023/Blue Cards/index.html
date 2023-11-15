@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/4e6601cb6b.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<!-- Change code below this line -->
+<body class="bg-slate-800 flex justify-center items-center min-h-screen">
+
+    <div class="max-w-[700px] text-slate-100 grid grid-cols-1 md:grid-cols-2 gap-5
+    [&>section]:bg-blue-500
+    [&>section]:p-7
+    [&>section]:rounded-lg 
+    [&>section]:shadow-lg 
+    [&>section]:flex
+    [&_h1]:text-lg
+    [&_h1]:font-semibold">
+        <!-- 1 -->
+        <section class="items-center gap-2">
+            <div>
+                <h1>86 places</h1>
+                <p>See your most visited places and the places you've been.</p>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </section>
+
+        <!-- 2 -->
+        <section class="flex-col gap-2 row-span-2">
+            <img class="hover:brightness-200 transition rounded w-full object-cover aspect-video" src="https://images.unsplash.com/reserve/uvRBqDAfQfaGPJiI6lVS_R0001899.jpg?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <h1>Romania and Norway</h1>
+            <p>Mar 18 - 31, 2028</p>
+            <button class="px-4 py-1 rounded-md shadow-lg shadow-blue-600/20 bg-blue-200/30 mr-auto active:shadow-inner">View trips</button>
+        </section>
+
+        <!-- 3 -->
+        <section class="flex-col">
+            <h1>Home and work</h1>
+            <div class="flex items-center gap-2 group cursor-pointer">
+                <i class="fa-solid fa-home"></i>
+                <p class="group-hover:underline">Add your home address</p>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="flex items-center gap-2 group cursor-pointer">
+                <i class="fa-solid fa-laptop"></i>
+                <p class="group-hover:underline">Add your work address</p>
+                <i class="fa-solid fa-chevron-right"></i>
+            </div>
+        </section>
+    </div>
+    
+</body>
+<!-- Change code above this line -->
+
+</html>
