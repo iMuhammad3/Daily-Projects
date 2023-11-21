@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                fontFamily: {
+                    "sans": ["Poppins", "sans-serif"]
+                }
+            }
+        }
+    </script>
+</head>
+
+<!-- Change code below this line -->
+<body class="bg-slate-100 flex justify-center items-center min-h-screen">
+
+    <div class="flex justify-center flex-wrap gap-1
+    [&>section]:bg-white 
+    [&>section]:w-72
+    [&>section]:flex 
+    [&>section]:flex-col 
+    [&>section]:items-center 
+    [&>section]:gap-7 
+    [&>section]:p-10
+    [&>section]:rounded-lg
+    [&>section]:transition
+    [&>section]:duration-500
+    hover:[&>section]:scale-110 
+    hover:[&>section]:shadow-[0_5px_10px] 
+    hover:[&>section]:shadow-blue-500/20 
+    hover:[&>section]:z-10
+    [&_button]:px-7 
+    [&_button]:py-2 
+    [&_button]:rounded-md 
+    [&_button]:border-2 
+    [&_button]:text-slate-600
+    hover:[&_button]:bg-blue-500
+    hover:[&_button]:shadow
+    hover:[&_button]:border-blue-500
+    hover:[&_button]:text-white
+    [&_img]:w-20 
+    [&_img]:aspect-square 
+    [&_img]:object-cover 
+    [&_img]:rounded-full">
+        <section>
+            <img src="https://images.unsplash.com/photo-1529148266338-1a3f1f4ec096?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <h2 class="text-xl font-semibold">Myrtie May</h2>
+            <p class="-mt-5 text-slate-600">Head of Global Product</p>
+            <button>Connect</button>
+        </section>
+        <section>
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <h2 class="text-xl font-semibold">Blanche Pearson</h2>
+            <p class="-mt-5 text-slate-600">Sales Manager</p>
+            <button>Connect</button>
+        </section>
+        <section>
+            <img src="https://images.unsplash.com/photo-1470441623172-c47235e287ee?q=80&w=2672&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <h2 class="text-xl font-semibold">Laura French</h2>
+            <p class="-mt-5 text-slate-600">External Consultant</p>
+            <button>Connect</button>
+        </section>
+    </div>
+
+</body>
+<!-- Change code above this line -->
+
+</html>
