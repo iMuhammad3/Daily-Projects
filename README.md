@@ -1,2 +1,3 @@
 # Daily-Projects
-This is a repository where I share my daily challenges that i work on provided by the https://icodethis.com platform
+Building mini projects in public daily, at https://icodethis.com  
+Improving my speed, efficiency and understanding of html, css, tailwind and javascript.
