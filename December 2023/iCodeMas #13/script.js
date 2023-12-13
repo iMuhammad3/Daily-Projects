@@ -29,7 +29,7 @@ const createMessage = (message, santa = false) => {
     li.className = santa ? "" : "self-end flex-row-reverse"
     li.innerHTML = `
         <img src=${santa ? "https://icodethis.com/images/iCodeMas/tiny_santa.png" : "https://shismqklzntzxworibfn.supabase.co/storage/v1/object/public/avatars/d18365d5-8acd-4e7c-a70c-3cea444dd8c9.png"} alt="" />
-        <div class=${santa ? "" : "flex flex-col items-end"}>
+        <div class=${santa ? "" : "text-right"}>
             <p>${message}</p>
             <small>${time}</small>
         </div>
