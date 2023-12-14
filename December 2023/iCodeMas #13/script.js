@@ -35,6 +35,7 @@ const createMessage = (message, santa = false) => {
         </div>
     `
     chat.appendChild(li)
+    chat.scrollTop = chat.scrollHeight
 }
 
 const format = (number) => {
